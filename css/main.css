@@ -14,10 +14,12 @@
   --font-color1: #284372;
   --font-color2: #ffd700;
 }
-
+img {
+  width: 100%;
+}
 @media (min-width: 800px) {
   .sec {
-    height: 815px;
+    height: 865px;
     display: flex;
     position: relative;
   }
@@ -27,11 +29,12 @@
     top: 0;
     left: 0;
     width: 50%;
-    height: 100%;
+    height: 0%;
     background-image: url(../imges/page_3_bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: -1;
   }
   h2,
   h2 > * {
@@ -54,89 +57,125 @@
   }
   .main {
     position: absolute;
-    right: 0;
-    top: 152px;
+    top: 250px;
   }
-
+  .reservation_con {
+    margin-top: 85px;
+    display: flex;
+  }
   .reservation_con > button {
-    width: 404px;
-    height: 124px;
-    background-color: transparent;
-    box-shadow: 0 0 20px #ffffff;
-    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    border: 3px solid white;
+    margin: 12px;
   }
   #reserve_info {
-    background-image: url(../imges/Reservation_info_bg.jpg);
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-    /* background-position: -28px -140px; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.3s;
-  }
-  #reserve_start {
-    background-image: url(../imges/reservation_bg.jpg);
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.3s;
-    margin-left: 22px;
+    margin-left: 0;
   }
   #reserve_info > span,
   #reserve_start > span {
     color: white;
-    transform: rotatey(180deg);
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size1);
+    font-weight: 500;
+    padding-right: 3rem;
+    position: relative;
+  }
+  #reserve_info > span::after,
+  #reserve_start > span::after {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    position: absolute;
+    top: 20%;
+    right: 0;
   }
   #reserve_info:hover,
   #reserve_start:hover {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  .sub_menu_con {
-    border: 1px solid rebeccapurple;
-    display: flex;
-    margin-top: 46px;
-    max-width: 840px;
-    height: 240px;
     background-color: white;
-    border-radius: 10px;
-    opacity: 0.8;
-    backdrop-filter: blur(25px);
   }
+  #reserve_info:hover > span,
+  #reserve_start:hover > span {
+    color: black;
+  }
+  .popup_con {
+    position: absolute;
+    overflow: hidden;
+    width: 305px;
+    height: 160px;
+    top: 0.6rem;
+    right: 2.8rem;
+  }
+  .popup_swiper {
+    position: relative;
+    display: flex;
+  }
+  .swiper-wrapper {
+    display: flex;
+  }
+  .swiper-slide img {
+  }
+  .popup_next,
+  .popup_prev {
+  }
+  .popup_next::after,
+  .popup_prev::after {
+    position: absolute;
+    font-family: "Font Awesome 6 free";
+    font-weight: 600;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .popup_next::after {
+    content: "\f105";
+    right: 0;
+  }
+  .popup_prev::after {
+    content: "\f104";
+    left: 0;
+  }
+
   .sub_menu {
-    margin: 30px 37px;
+    margin: 32px 37px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin-left: 0;
   }
   .sub_menu > div {
     margin: 0 0.5rem;
   }
-  .notice {
-    width: 300px;
+  .sub_menu > .notice {
+    width: 312px;
     height: 180px;
     position: relative;
+    margin-left: 0;
+    border: 1px solid white;
   }
   .room_info {
     width: 260px;
     height: 180px;
     position: relative;
-
+    border: 1px solid white;
   }
   .weather_info {
     width: 136px;
     height: 180px;
     position: relative;
-
+    border: 1px solid white;
   }
+  .weather_contests > div > p {
+    color: white;
+  }
+
   h3 {
     font-size: var(--font-size3);
     font-weight: 500;
     color: white;
     background-color: var(--font-color1);
     padding: 10px 10px;
-    border-radius: 10px 10px 0 0; 
+    border-bottom: 1px solid white;
   }
   .fa-star {
     color: var(--font-color2);
@@ -146,10 +185,9 @@
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    border: 1px solid red;
     top: 4%;
     right: 8%;
-    font-size: large;  
+    font-size: large;
   }
   .notice_doc::after:hover {
     transform: rotate(90deg);
@@ -159,39 +197,34 @@
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    border: 1px solid red;
     top: 4%;
     right: 8%;
-    font-size: large; 
+    font-size: large;
   }
   .room_info_doc::before {
     content: "\f04b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    border: 1px solid red;
     top: 4%;
     right: 16%;
-    font-size: large; 
+    font-size: large;
   }
   .weather_info_doc::after {
     content: "\2b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    border: 1px solid red;
     top: 4%;
     right: 8%;
-    font-size: large;  
+    font-size: large;
+    color: white;
   }
   .sub_menu_contents {
     border: 1px solid var(--font-color1);
     height: 140px;
     padding-top: 1rem;
-    border-radius: 0 0 10px 10px;
-    background-color: white;
     backdrop-filter: none;
-
   }
   .sub_menu_contents p {
     color: black;
@@ -208,17 +241,28 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: white;
   }
   .slide_wrap {
     position: relative;
     overflow: hidden;
     padding-top: 0rem;
+    width: 260px;
+
   }
-  .slide_img {
+  .room_swiper {
+    display: flex;
+  }
+  .swiper-slide img  {
+    width: 100%;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  /* .slide_img {
     display: flex;
     width: 500%;
     backdrop-filter: none;
-
   }
   .slider {
     width: calc(100% / 5);
@@ -226,7 +270,7 @@
   }
   .slider img {
     width: 260px;
-  }
+  } */
 
   .weather_contests {
     padding-top: 0;
@@ -242,5 +286,13 @@
   }
   .weather_contests > div > img {
     width: 50%;
+  }
+  .buliding_bg {
+    position: absolute;
+    width: 672px;
+    height: 614px;
+    left: 10%;
+    top: 40%;
+    z-index: -2;
   }
 }

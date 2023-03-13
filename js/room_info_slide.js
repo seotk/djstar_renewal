@@ -38,3 +38,16 @@ let toggle = true;
 
 $slidePauseBtn.onclick = function (e) {};
 $slidePauseBtn.addEventListener("click", function () {});
+
+
+var swiper = new Swiper(".room_info_Swiper", {
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".popup_next",
+    prevEl: ".popup_prev",
+  },
+});

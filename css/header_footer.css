@@ -14,7 +14,9 @@
   --font-color1: #284372;
   --font-color2: #ffd700;
 }
-
+.wrap {
+  overflow: hidden;
+}
 /* ================================================pc======================================= */
 @media (min-width: 800px) {
   .mw {
@@ -22,8 +24,13 @@
     width: calc(100% - 2rem);
     margin: auto;
   }
+  .mw2 {
+    max-width: 784PX;
+    width: calc(100% - 2rem);
+    margin: auto;
+  }
   body {
-    background-image: url(../imges/page_bg.jpg);
+    background-image: url(../imges/mobile_version_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -189,7 +196,7 @@
 
   .ft {
     background-color: rgba(0, 0, 0, 0.6);
-    height: 150px;
+    height: 100px;
     display: flex;
     border-top: 1px solid white;
   }
@@ -216,13 +223,16 @@
     color: var(--font-color2);
     font-size: var(--font-size3);
   }
+  .shotycut_btn {
+    display: flex;
+  }
   .shotycut_btn > button {
-    width: 260px;
+    width: 180px;
     height: 31px;
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    margin-top: 0.5rem;
+    margin: 1rem;
   }
   .shotycut_btn > button > span::after {
     content: "\f0de";
@@ -232,7 +242,6 @@
   }
   .shotycut_btn {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
   }
 }
