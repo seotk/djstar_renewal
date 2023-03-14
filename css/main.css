@@ -19,14 +19,27 @@ img {
 }
 @media (min-width: 800px) {
   .sec {
-    height: 865px;
+    height: 730px;
     display: flex;
     position: relative;
   }
-  .sec::before {
+  /* .sec::before {
+    content: "";
+    position: absolut.sub_menue;
+    top: 50%;
+    left: -80%;
+    width: 100%;
+    height: 50%;
+    background-image: url(../imges/page_2_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  } */
+  /* .sec::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1rem;
     left: 0;
     width: 50%;
     height: 0%;
@@ -35,7 +48,7 @@ img {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-  }
+  } */
   h2,
   h2 > * {
     /* border: 1px solid red; */
@@ -60,7 +73,7 @@ img {
     top: 250px;
   }
   .reservation_con {
-    margin-top: 85px;
+    margin-top: 55px;
     display: flex;
   }
   .reservation_con > button {
@@ -68,7 +81,8 @@ img {
     height: 50px;
     background-color: black;
     border: 3px solid white;
-    margin: 12px;
+    margin: 12px 8px;
+    cursor: pointer;
   }
   #reserve_info {
     margin-left: 0;
@@ -103,9 +117,10 @@ img {
     position: absolute;
     overflow: hidden;
     width: 305px;
-    height: 160px;
-    top: 0.6rem;
-    right: 2.8rem;
+    height: 140px;
+    top: -1.4rem;
+    right: 0rem;
+    border: 3px solid white;
   }
   .popup_swiper {
     position: relative;
@@ -114,7 +129,14 @@ img {
   .swiper-wrapper {
     display: flex;
   }
-  .swiper-slide img {
+  .popup_swiper .swiper-wrapper .swiper-slide > a {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .popup_next,
   .popup_prev {
@@ -126,18 +148,19 @@ img {
     font-weight: 600;
     top: 50%;
     transform: translateY(-50%);
+    font-size: x-large;
   }
   .popup_next::after {
     content: "\f105";
-    right: 0;
+    right: 1rem;
   }
   .popup_prev::after {
     content: "\f104";
-    left: 0;
+    left: 1rem;
   }
 
   .sub_menu {
-    margin: 32px 37px;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,19 +174,38 @@ img {
     height: 180px;
     position: relative;
     margin-left: 0;
-    border: 1px solid white;
+    border: 3px solid white;
   }
   .room_info {
     width: 260px;
     height: 180px;
-    position: relative;
-    border: 1px solid white;
+    border: 3px solid white;
+    overflow: hidden;
   }
-  .weather_info {
+  .room_start.on,
+  .room_pause.on {
+    color: var(--font-color2);
+  }
+  .room_info_doc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .play_pause {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .room_start {
+    padding-right: 0.5rem;
+  }
+  .sub_menu .weather_info {
     width: 136px;
     height: 180px;
     position: relative;
-    border: 1px solid white;
+    border: 3px solid white;
+    margin-right: 0;
   }
   .weather_contests > div > p {
     color: white;
@@ -180,19 +222,24 @@ img {
   .fa-star {
     color: var(--font-color2);
   }
+  .fa-star > span {
+    color: white;
+  }
   .notice_doc::after {
     content: "\2b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    top: 4%;
+    top: 5%;
     right: 8%;
     font-size: large;
+    transition: 0.3s;
+    cursor: pointer;
   }
   .notice_doc::after:hover {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
-  .room_info_doc::after {
+  /* .room_info_doc::after {
     content: "\f04c";
     position: absolute;
     font-family: "Font Awesome 6 free";
@@ -209,16 +256,20 @@ img {
     top: 4%;
     right: 16%;
     font-size: large;
-  }
+  } */
   .weather_info_doc::after {
     content: "\2b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    top: 4%;
+    top: 5%;
     right: 8%;
     font-size: large;
     color: white;
+    cursor: pointer;
+  }
+  .weather_info_doc::after:hover {
+    transform: rotate(-90deg);
   }
   .sub_menu_contents {
     border: 1px solid var(--font-color1);
@@ -230,6 +281,7 @@ img {
     color: black;
     font-size: var(--font-size4);
     font-weight: 500;
+    cursor: pointer;
   }
   .notice > .sub_menu_contents > div {
     width: 260px;
@@ -243,20 +295,19 @@ img {
     white-space: nowrap;
     color: white;
   }
+  .notice > .sub_menu_contents > div > p:hover {
+    color: var(--font-color2);
+  }
   .slide_wrap {
     position: relative;
-    overflow: hidden;
-    padding-top: 0rem;
-    width: 260px;
-
+    padding-top: 0;
   }
   .room_swiper {
     display: flex;
   }
-  .swiper-slide img  {
-    width: 100%;
+  .popup_swiper > .swiper-wrapper {
   }
-  .swiper-slide img {
+  .slide_wrap .swiper-slide > img {
     width: 100%;
   }
   /* .slide_img {
@@ -292,7 +343,75 @@ img {
     width: 672px;
     height: 614px;
     left: 10%;
-    top: 40%;
+    top: 35%;
     z-index: -2;
+  }
+}
+
+@media (max-width: 800px) {
+  .sec {
+    max-width: 90%;
+    width: calc(100% - 2rem);
+    margin: auto;
+  }
+  h2 {
+    font-family: "Gowun Dodum";
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+  }
+  h2 > span {
+    font-size: var(--font-size6);
+    line-height: 31px;
+  }
+  h2 > strong {
+    font-size: var(--font-size7);
+    line-height: 70px;
+    margin-top: 1rem;
+  }
+  .main {
+    position: absolute;
+    top: 250px;
+  }
+  .reservation_con {
+    margin-top: 105px;
+    display: flex;
+  }
+  .reservation_con > button {
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    border: 3px solid white;
+    margin: 12px 8px;
+    cursor: pointer;
+  }
+  #reserve_info {
+    margin-left: 0;
+  }
+  #reserve_info > span,
+  #reserve_start > span {
+    color: white;
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size1);
+    font-weight: 500;
+    padding-right: 3rem;
+    position: relative;
+  }
+  #reserve_info > span::after,
+  #reserve_start > span::after {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  #reserve_info:hover,
+  #reserve_start:hover {
+    background-color: white;
+  }
+  #reserve_info:hover > span,
+  #reserve_start:hover > span {
+    color: black;
   }
 }

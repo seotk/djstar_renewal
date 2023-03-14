@@ -34,6 +34,7 @@
     <script src="./js/room_info_slide1.js" defer></script>
     <script src="./js/popup_slide.js" defer></script>
     <script src="./js/weather.js" defer></script>
+    <script src="./js/shortcut.js" defer></script>
   </head>
   <body>
     <div class="wrap">
@@ -105,6 +106,7 @@
           <div class="person_menu">
             <a href="#"><button class="person_btn login">로그인</button></a>
             <a href="#"><button class="person_btn signup">회원가입</button></a>
+            <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
       </header>
@@ -123,16 +125,20 @@
             <div class="swiper popup_swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="./imges/popup1_1_bg.png" alt="" />
+                  <img src="./imges/popup1_bg.jpg" alt="popup1_bg" />
+                  <a href="#"></a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./imges/popup1_1_bg.png" alt="" />
+                  <img src="./imges/popup2_bg.png" alt="popup2_bg" />
+                  <a href="#"></a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./imges/popup1_1_bg.png" alt="" />
+                  <img src="./imges/popup3_bg.png" alt="popup3_bg" />
+                  <a href="#"></a>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./imges/popup1_1_bg.png" alt="" />
+                  <img src="./imges/popup4_bg.png" alt="popup4_bg" />
+                  <a href="#"></a>
                 </div>
               </div>
               <div class="swiper-button-next popup_next"></div>
@@ -159,13 +165,21 @@
             </div>
             <div class="room_info">
               <h3 class="room_info_doc">
-                <i class="fa-solid fa-star"></i> 시설안내
+                <i class="fa-solid fa-star"><span>시설안내</span></i>
+                <div class="play_pause">
+                  <div class="swiper-button-next room_start">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                  <div class="swiper-button-prev room_pause">
+                    <i class="fa-solid fa-pause"></i>
+                  </div>
+                </div>
               </h3>
               <div class="sub_menu_contents slide_wrap">
                 <div class="swiper room_swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="./imges/room_info01.jpg" alt="room_info01" />
+                      <img src="./imges/room_info01_1.png" alt="room_info01" />
                     </div>
                     <div class="swiper-slide">
                       <img src="./imges/room_info02.jpg" alt="room_info02" />
@@ -182,7 +196,7 @@
             </div>
             <div class="weather_info">
               <h3 class="weather_info_doc">
-                <i class="fa-solid fa-star"></i> 날씨안내
+                <i class="fa-solid fa-star"></i> <span>날씨안내</span>
               </h3>
               <div class="sub_menu_contents weather_contests">
                 <!-- <p>${todatData.date}</p>
@@ -206,16 +220,42 @@
           </p>
           <div class="shortcut">
             <span>바로가기</span>
-            <div class="shotycut_btn">
-              <button><span>기관사이트 바로가기</span></button>
-              <button><span>지역별천문대 바로가기</span></button>
-              <button><span>카페 바로가기</span></button>
-            </div>
-            <div class="shortcut_contents">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+            <ul class="shotycut_btn">
+              <li>
+                <span>기관사이트 바로가기</span>
+                <ul class="shortcut_contents 
+                agency">
+                  <li><a href="#">대전광역시</a></li>
+                  <li><a href="#">한국천문연구원</a></li>
+                  <li><a href="#">국립중앙과학관</a></li>
+                  <li><a href="#">(사)한국천문우주과학관협회</a></li>
+                  <li><a href="#">대덕연구개발특구</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>지역별천문대 바로가기</span>
+                <ul class="shortcut_contents region">
+                  <li><a href="#">별마로천문대</a></li>
+                  <li><a href="#">김해천문대</a></li>
+                  <li><a href="#">곡성섬진강천문대</a></li>
+                  <li><a href="#">국토정중앙천문대</a></li>
+                  <li><a href="#">소백산천문대</a></li>
+                  <li><a href="#">충주고구려천문과학관</a></li>
+                  <li><a href="#">칠갑산천문대</a></li>
+                  <li><a href="#">보현산천문대</a></li>
+                  <li><a href="#">예천천문우주센터</a></li>
+                  <li><a href="#">서귀포천문과학문화관</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>카페 바로가기</span>
+                <ul class="shortcut_contents cafe">
+                  <li><a href="#">별이 가득한 하늘놀이터</a></li>
+                  <li><a href="#">대전시민천문대 어린이합창단</a></li>
+
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
