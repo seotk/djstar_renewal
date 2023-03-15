@@ -1,0 +1,201 @@
+@charset 'utf-8';
+
+:root {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  color: white;
+  --font-size1: 22px;
+  --font-size2: 18px;
+  --font-size3: 16px;
+  --font-size4: 14px;
+  --font-size5: 12px;
+  --font-size6: 28px;
+  --font-size7: 60px;
+  --font-color1: #284372;
+  --font-color2: #ffd700;
+}
+img {
+  width: 100%;
+}
+.wrap {
+  overflow: hidden;
+}
+.mw3 {
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: auto;
+}
+@media (min-width: 800px) {
+  .location {
+    background-image: url(../imges/reservation_main_banner.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+  }
+  .location h2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 250px;
+    font-size: 48px;
+  }
+  .title_list {
+    display: flex;
+    padding-top: 2rem;
+  }
+  .title_list > li {
+    border: 2px solid var(--font-color2);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    text-align: center;
+  }
+  .title_list > li > a {
+    color: white;
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size1);
+    font-weight: 300;
+    line-height: 40px;
+    padding: 0 2rem ;
+  }
+  .title_list > li:hover {
+    background-color: var(--font-color2);
+  }
+  .title_list > li.on {
+    background-color: var(--font-color1);
+    
+  }
+  .title_list > li.on >a {
+    color: var(--font-color2);
+  }
+  .sub_title_list {
+    margin-top: 2rem;
+    position: relative;
+  }
+  .sub_title_list > button {
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 32px;
+    padding: 0 1.5rem;
+  }
+  .sub_title_list > button:nth-of-type(1) {
+    padding-left: 0;
+  }
+  .sub_title_list > button::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 7.5%;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+  }
+  .sub_title_list > button.on, .sub_title_list > button:hover {
+    color: var(--font-color2);
+
+  }
+
+  .sec {
+    /* max-width: 1200px;
+    width: calc(100% - 2rem);
+    margin: auto; */
+    margin-top: 2rem;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sec > * {
+    border: 1px solid red;
+  }
+  .sec h3 {
+    padding: 1rem 1rem;
+    width: 100%;
+    background-color: var(--font-color1);
+  }
+  .calendar {
+    width: 40%;
+  }
+  .detail {
+    width: 60%;
+    padding: 1rem 2rem;
+  }
+  .detail h3 {
+    padding-bottom: 1rem;
+  }
+
+  .detail ul {
+    padding-top: 2rem;
+  }
+
+  .detail.personnel > input {
+    width: 100px;
+  }
+  .detail.personnel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail.personnel h4 {
+    width: 100%;
+  }
+  .detail.personnel input {
+    margin-left: 20%;
+  }
+  .detail.personnel span {
+    flex-grow: 1;
+  }
+  .item.on {
+    display: block;
+  }
+  .item {
+    display: none;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 0.5rem 0;
+    background-color: #99999920;
+  }
+  .title > span {
+    text-align: center;
+    width: 25%;
+  }
+  .reserve_list {
+    padding: 0.5rem 0;
+  }
+  .reserve_list > label {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid gray;
+  }
+  .reserve_list > label > span,
+  .reserve_list > label > input {
+    width: 25%;
+  }
+  .reserve_list input {
+    background-color: var(--font-color1);
+    width: 80px;
+    height: 40px;
+    color: white;
+  }
+  .reserve_list input:checked {
+  }
+  .reserve_list input:focus {
+  }
+  .reserve_list input:enabled {
+  }
+  .reserve_list input:disabled {
+    background-color: darkgrey;
+  }
+}

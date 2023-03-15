@@ -33,3 +33,24 @@ function toggleAccordion() {
 $title.forEach((item) => {
   item.addEventListener("click", toggleAccordion);
 });
+
+
+const list2 = document.querySelector(".mo_gnb_list");
+const $li2 = list2.querySelectorAll(".mo_gnb_list > li");
+const $title2 = list2.querySelectorAll(".mo_gnb_list > li > a");
+
+function toggleAccordion() {
+  const thisItem = this.parentNode;
+  //   console.log(thisItem);
+  $li.forEach((item) => {
+    if (thisItem == item) {
+      thisItem.classList.toggle("on");
+      return;
+    }
+    item.classList.remove("on");
+  });
+}
+
+$title.forEach((item) => {
+  item.addEventListener("click", toggleAccordion);
+});

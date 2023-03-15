@@ -35,6 +35,7 @@
     <script src="./js/popup_slide.js" defer></script>
     <script src="./js/weather.js" defer></script>
     <script src="./js/shortcut.js" defer></script>
+    <script src="./js/header.js" defer></script>
   </head>
   <body>
     <div class="wrap">
@@ -58,7 +59,7 @@
             <a href="./index.html"><img src="./imges/logo.png" alt="logo" /></a>
           </h1>
           <ul class="gnb_list">
-            <li>
+            <!-- <li>
               <a href="#">천문대 소개 </a>
               <ul class="sub_list">
                 <li><a href="#">인사말</a></li>
@@ -101,13 +102,66 @@
                 <li><a href="#">천문정보</a></li>
                 <li><a href="#">행사사진</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           <div class="person_menu">
-            <a href="#"><button class="person_btn login">로그인</button></a>
+            <!-- <a href="#"><button class="person_btn login">로그인</button></a>
             <a href="#"><button class="person_btn signup">회원가입</button></a>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i> -->
           </div>
+        </nav>
+        <nav class="mo_nav">
+          <div class="mo_person_menu">
+            <!-- <a href="#"><button class="person_btn login">로그인</button></a>
+            <a href="#"><button class="person_btn signup">회원가입</button></a>
+            <i class="fa-solid fa-bars"></i> -->
+          </div>
+          <ul class="mo_gnb_list">
+            <!-- <li>
+              <a href="#">천문대 소개 </a>
+              <ul class="sub_list">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">현황 및 조직도</a></li>
+                <li><a href="#">시설안내</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">이용안내 </a>
+              <ul class="sub_list">
+                <li><a href="#">관람안내</a></li>
+                <li><a href="#">특별 프로그램</a></li>
+                <li><a href="#">아스트로 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">예약마당 </a>
+              <ul class="sub_list">
+                <li><a href="#">관람예약</a></li>
+                <li><a href="#">전시해설예약</a></li>
+                <li><a href="#">특별 프로그램예약</a></li>
+                <li><a href="#">봉사활동 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">참여마당 </a>
+              <ul class="sub_list">
+                <li><a href="#">질문과 답변</a></li>
+                <li><a href="#">방문후기</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">봉사활동</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">알림마당 </a>
+              <ul class="sub_list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">홍보자료</a></li>
+                <li><a href="#">천문정보</a></li>
+                <li><a href="#">행사사진</a></li>
+              </ul>
+            </li> -->
+          </ul>
         </nav>
       </header>
       <section class="sec mw2">
@@ -118,8 +172,8 @@
         </h2>
         <section class="main">
           <article class="reservation_con">
-            <button id="reserve_info"><span>예약안내</span></button>
-            <button id="reserve_start"><span>예약하기</span></button>
+            <button id="reserve_info"><span>예약안내</span><a href="#"></a></button>
+            <button id="reserve_start"><span>예약하기</span><a href="./reserve_main.html"></a></button>
           </article>
           <article class="popup_con">
             <div class="swiper popup_swiper">
@@ -204,6 +258,43 @@
         <p>${todatData.temp2m.min}/${todatData.temp2m.max}</p>`; -->
               </div>
             </div>
+          </article>
+        </section>
+        <section class="mo_main">
+          <article class="reservation_con">
+            <button id="reserve_info"><span>예약안내</span><a href="#"></a></button>
+            <button id="reserve_start"><span>예약하기</span><a href="#"></a></button>
+          </article>
+          <article class="mo_sub_menu">
+            <button><span>공지사항</span><a href="#"></a></button>
+            <button><span>날씨안내</span><a href="#"></a></button>
+            <button><span>시설안내</span><a href="#"></a></button>
+            <button><span>천문정보</span><a href="#"></a></button>
+          </article>
+          <article class="popup_con">
+            <div class="swiper popup_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./imges/popup1_bg.jpg" alt="popup1_bg" />
+                  <a href="#"></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imges/popup2_bg.png" alt="popup2_bg" />
+                  <a href="#"></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imges/popup3_bg.png" alt="popup3_bg" />
+                  <a href="#"></a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./imges/popup4_bg.png" alt="popup4_bg" />
+                  <a href="#"></a>
+                </div>
+              </div>
+              <div class="swiper-button-next popup_next"></div>
+              <div class="swiper-button-prev popup_prev"></div>
+            </div>
+            <!-- swiper -->
           </article>
         </section>
         <div class="buliding_bg">
