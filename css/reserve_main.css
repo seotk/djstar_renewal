@@ -60,16 +60,15 @@ img {
     font-size: var(--font-size1);
     font-weight: 300;
     line-height: 40px;
-    padding: 0 2rem ;
+    padding: 0 2rem;
   }
   .title_list > li:hover {
     background-color: var(--font-color2);
   }
   .title_list > li.on {
     background-color: var(--font-color1);
-    
   }
-  .title_list > li.on >a {
+  .title_list > li.on > a {
     color: var(--font-color2);
   }
   .sub_title_list {
@@ -96,24 +95,29 @@ img {
     height: 40px;
     background-color: white;
   }
-  .sub_title_list > button.on, .sub_title_list > button:hover {
+  .sub_title_list > button.on,
+  .sub_title_list > button:hover {
     color: var(--font-color2);
-
   }
 
-  .sec {
+  .sec > div {
     /* max-width: 1200px;
     width: calc(100% - 2rem);
     margin: auto; */
-    margin-top: 2rem;
     border: 1px solid rebeccapurple;
     display: flex;
     flex-wrap: wrap;
+    background-color: #eaeaea;
   }
   .sec > * {
     border: 1px solid red;
   }
-  .sec h3 {
+  form {
+    margin: 2rem 0;
+    min-height: 700px;
+    max-height: 1200px;
+  }
+  h3 {
     padding: 1rem 1rem;
     width: 100%;
     background-color: var(--font-color1);
@@ -124,6 +128,7 @@ img {
   .detail {
     width: 60%;
     padding: 1rem 2rem;
+    color: black;
   }
   .detail h3 {
     padding-bottom: 1rem;
@@ -133,24 +138,39 @@ img {
     padding-top: 2rem;
   }
 
-  .detail.personnel > input {
-    width: 100px;
-  }
   .detail.personnel {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
   }
   .detail.personnel h4 {
     width: 100%;
+    font-size: var(--font-size1);
   }
-  .detail.personnel input {
-    margin-left: 20%;
+  .detail.personnel p {
+    width: 70%;
+    margin-top: 2rem;
+  }
+  .detail.personnel > input {
+    background-color: var(--font-color1);
+    width: 80px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  .detail.personnel > input:hover {
+    background-color: var(--font-color2);
   }
   .detail.personnel span {
-    flex-grow: 1;
+    width: 10%;
+    /* flex-grow: 1; */
+  }
+  .detail.personnel button {
+    display: inline-block;
   }
   .item.on {
     display: block;
@@ -161,8 +181,8 @@ img {
   .title {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid var(--font-color1);
+    border-bottom: 1px solid var(--font-color1);
     padding: 0.5rem 0;
     background-color: #99999920;
   }
@@ -188,6 +208,12 @@ img {
     width: 80px;
     height: 40px;
     color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .reserve_list input:hover {
+    background-color: #ffd700;
   }
   .reserve_list input:checked {
   }
@@ -197,5 +223,171 @@ img {
   }
   .reserve_list input:disabled {
     background-color: darkgrey;
+  }
+
+  .sec3 {
+    width: 100%;
+  }
+  .sec3 h4 {
+    width: 100%;
+    font-size: var(--font-size1);
+    padding: 1rem;
+    color: black;
+  }
+
+  .detail.person_info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .input--ruri {
+    margin: 1rem;
+  }
+  .person {
+    margin-top: 2rem;
+  }
+  .sec3_contents > * {
+    border: 1px solid red;
+  }
+  .sec3_contents {
+    padding: 1rem;
+  }
+  .info_agree_contents {
+    color: black;
+    width: 100%;
+  }
+  .info_agree_contents h5 {
+    font-weight: 700;
+    font-size: var(--font-size2);
+    padding: 1rem;
+  }
+  .info_agree_contents p {
+    display: flex;
+    flex-direction: column;
+  }
+  .info_agree_contents p strong {
+    font-weight: 700;
+    font-size: var(--font-size2);
+    padding: 1rem 2rem;
+  }
+  .info_agree_contents p span {
+    font-weight: 500;
+    font-size: var(--font-size4);
+    padding: 0.25rem 5rem;
+  }
+  .red {
+    color: red;
+  }
+  .info_agree {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info_agree input[type="submit"] {
+    background-color: var(--font-color1);
+    width: 150px;
+    height: 45px;
+    color: white;
+    font-size: var(--font-size2);
+    cursor: pointer;
+    border: none;
+  }
+  .info_agree input[type="submit"]:hover {
+    background-color: var(--font-color2);
+  }
+  .info_agree label {
+    color: black;
+  }
+
+  .sec {
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: all 0.3s;
+  }
+  .person > li.on .sec {
+    display: block;
+    max-height: 800px;
+  }
+}
+
+@media (max-width:800px) {
+  .location {
+    background-image: url(../imges/reservation_main_banner.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+  }
+  .location h2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 150px;
+    font-size: 36px;
+  }
+  .title_list {
+    display: flex;
+    padding-top: 2rem;
+  }
+  .title_list > li {
+    border: 2px solid var(--font-color2);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    text-align: center;
+  }
+  .title_list > li > a {
+    color: white;
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size4);
+    font-weight: 300;
+    line-height: 40px;
+    padding: 0 0.5rem;
+  }
+  .title_list > li:hover {
+    background-color: var(--font-color2);
+  }
+  .title_list > li.on {
+    background-color: var(--font-color1);
+  }
+  .title_list > li.on > a {
+    color: var(--font-color2);
+  }
+  .sub_title_list {
+    margin-top: 2rem;
+    position: relative;
+  }
+  .sub_title_list > button {
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 0 1.5rem;
+  }
+  .sub_title_list > button:nth-of-type(1) {
+    padding-left: 0;
+  }
+  /* .sub_title_list > button::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+  } */
+  .sub_title_list > button.on,
+  .sub_title_list > button:hover {
+    color: var(--font-color2);
   }
 }
