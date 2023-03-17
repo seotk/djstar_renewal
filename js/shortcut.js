@@ -14,9 +14,9 @@
 //   });
 // });
 
-const list = document.querySelector(".shotycut_btn");
-const $li = list.querySelectorAll(".shotycut_btn > li");
-const $title = list.querySelectorAll(".shotycut_btn > li > span");
+const list = document.querySelector(".shortcut_btn");
+const $li = list.querySelectorAll(".shortcut_btn > li");
+const $title = list.querySelectorAll(".shortcut_btn > li > span");
 
 function toggleAccordion() {
   const thisItem = this.parentNode;

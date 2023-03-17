@@ -34,7 +34,7 @@ var sw = 0;
 roomPause.addEventListener("click", () => {
   if (sw === 0) {
     roomPause.classList.add("on");
-    roomSwiper.autoplay.stop();
+    roomSwiper.autoplay.pause();
     sw = 1;
     console.log(sw);
   }

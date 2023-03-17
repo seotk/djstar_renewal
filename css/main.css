@@ -19,10 +19,11 @@ img {
 }
 .wrap {
   overflow: hidden;
+  height: 100vh;
+  position: relative;
 }
 @media (min-width: 800px) {
   .sec {
-    min-height: 730px;
     display: flex;
     position: relative;
   }
@@ -185,12 +186,12 @@ img {
     height: 180px;
     position: relative;
     margin-left: 0;
-    border: 3px solid white;
+    /* border: 3px solid white; */
   }
   .room_info {
     width: 260px;
     height: 180px;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     overflow: hidden;
   }
   .room_start.on,
@@ -201,6 +202,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
   }
   .play_pause {
     display: flex;
@@ -215,7 +217,7 @@ img {
     width: 136px;
     height: 180px;
     position: relative;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     margin-right: 0;
   }
   .weather_contests > div > p {
@@ -236,19 +238,29 @@ img {
   .fa-star > span {
     color: white;
   }
+  .notice_doc {
+    position: relative;
+  }
   .notice_doc::after {
     content: "\2b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    top: 5%;
+    top: 15%;
     right: 8%;
     font-size: large;
     transition: 0.3s;
     cursor: pointer;
   }
-  .notice_doc::after:hover {
+  .notice_doc:hover::after {
     transform: rotate(-90deg);
+  }
+  .notice_doc > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   /* .room_info_doc::after {
     content: "\f04c";
@@ -268,22 +280,33 @@ img {
     right: 16%;
     font-size: large;
   } */
+  .weather_info_doc {
+    position: relative;
+  }
   .weather_info_doc::after {
     content: "\2b";
     position: absolute;
     font-family: "Font Awesome 6 free";
     font-weight: 600;
-    top: 5%;
+    top: 15%;
     right: 8%;
     font-size: large;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
   }
-  .weather_info_doc::after:hover {
+  .weather_info_doc:hover::after {
     transform: rotate(-90deg);
   }
+  .weather_info_doc > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .sub_menu_contents {
-    border: 1px solid var(--font-color1);
+    border: 3px solid white;
     height: 140px;
     padding-top: 1rem;
     backdrop-filter: none;
@@ -312,6 +335,14 @@ img {
   .slide_wrap {
     position: relative;
     padding-top: 0;
+    border: none;
+  }
+  .slide_wrap > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .room_swiper {
     display: flex;
@@ -367,11 +398,11 @@ img {
     max-width: 90%;
     width: calc(100% - 2rem);
     margin: auto;
-    min-height: 700px;
+    /* min-height: 700px; */
   }
   h2 {
     font-family: "Gowun Dodum";
-    padding-top: 65px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -390,10 +421,13 @@ img {
   .mo_main {
     position: absolute;
     top: 250px;
+    width: 90%;
+
   }
   .reservation_con {
     margin-top: 105px;
     display: flex;
+    justify-content: center;
   }
   .reservation_con > button {
     width: 200px;
@@ -406,6 +440,9 @@ img {
   }
   #reserve_info {
     margin-left: 0;
+  }
+  #reserve_start {
+    margin-right: 0;
   }
   #reserve_info > span,
   #reserve_start > span {
@@ -447,13 +484,13 @@ img {
     margin: auto;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .mo_sub_menu > button {
     border: 3px solid white;
-    width: 170px;
+    width: 100%;
     height: 45px;
     outline: none;
     background-color: var(--font-color1);
@@ -494,8 +531,9 @@ img {
     overflow: hidden;
     width: 305px;
     height: 140px;
-    margin-top: 50px;
     border: 3px solid white;
+    margin: auto;
+    margin-top: 50px;
   }
   .popup_swiper {
     position: relative;
@@ -542,7 +580,7 @@ img {
     max-width: 90%;
     width: calc(100% - 2rem);
     margin: auto;
-    min-height: 1200px;
+    /* min-height: 1200px; */
   }
   h2 > span {
     font-size: var(--font-size1);
@@ -559,11 +597,15 @@ img {
     position: relative;
   }
   .mo_sub_menu {
-    gap: 0.25rem;
+    margin-top: 2rem;
+    /* gap: 0.25rem; */
   }
   .mo_sub_menu > button {
-    width: 150px;
+    width: 100%;
     height: 45px;
+  }
+  .reservation_con > button { 
+    width: 100%;
   }
   .reservation_con #reserve_info > a,
   .reservation_con #reserve_start > a {
@@ -572,5 +614,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  .popup_con {
+    margin-top: 2rem;
   }
 }

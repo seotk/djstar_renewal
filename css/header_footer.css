@@ -31,6 +31,8 @@
   }
   body {
     background-image: url(../imges/mobile_version_bg.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,7 +71,7 @@
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
   }
   .top_info_title {
     font-size: var(--font-size3);
@@ -79,7 +81,7 @@
   }
   .top_info_text {
     font-size: var(--font-size4);
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     padding: 0 0.5rem;
     font-weight: 500;
   }
@@ -213,7 +215,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     height: 100px;
     display: flex;
-    border-top: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
   }
   .ft > div {
     display: flex;
@@ -237,21 +239,27 @@
     color: var(--font-color2);
     font-size: var(--font-size3);
   }
-  .shotycut_btn > li {
+  .shortcut_btn {
+    margin-top: 1rem;
+  }
+  .shortcut_btn > li {
     width: 200px;
-    height: 31px;
+    height: 29px;
     background-color: transparent;
     color: white;
-    border: 1px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.6);
     position: relative;
     cursor: pointer;
     margin: 0 1rem;
   }
-  .shotycut_btn > li > span::after {
+  .shortcut_btn > li > span {
+    line-height: 31px;
+  }
+  .shortcut_btn > li > span::after {
     position: absolute;
     top: 10%;
-    right: 0;
-    width: 10%;
+    right: 10%;
+    width: 0%;
     content: "\f0de";
     font-family: "Font Awesome 6 free";
     font-weight: 600;
@@ -259,11 +267,11 @@
     background-color: transparent;
   }
 
-  .shotycut_btn {
+  .shortcut_btn {
     display: flex;
     justify-content: space-between;
   }
-  .shotycut_btn > li.on .shortcut_contents {
+  .shortcut_btn > li.on .shortcut_contents {
     padding: 2rem 0.5rem;
     font-weight: normal;
     display: block;
@@ -302,6 +310,12 @@
   .mo_nav {
     display: none;
   }
+  .ft {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid white;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -322,18 +336,25 @@
   .gnb_list > li > a {
     font-size: var(--font-size2);
   }
-  .shotycut_btn {
+  .shortcut_btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
-  .shotycut_btn > button {
+  .shortcut_btn > button {
     margin: 0rem;
     padding: 0;
   }
   .mo_nav {
     display: none;
+  }
+  .ft {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid white;
+    width: 100%;
   }
 }
 /* ================================================moblie======================================= */
@@ -341,7 +362,16 @@
   .hd {
     height: 115px;
     background-color: rgba(0, 0, 0, 0.6);
-    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .nav {
+    position: fixed;
+    margin: auto;
+    z-index: 1000;
+    background-color: black;
+  }
+  .location {
   }
 
   .gnb_list {
@@ -369,18 +399,25 @@
     width: calc(100% - 2rem);
     margin: auto;
   }
+
   .ft {
+    position: absolute;
+    bottom: 0;
     border-top: 1px solid white;
-    max-width: 90%;
-    width: calc(100% - 2rem);
-    margin: auto;
+    width: 100%;
   }
   .ft > div {
+    width: calc(100% - 2rem);
+    margin: auto;
     display: flex;
+    justify-content: center;
     flex-direction: column;
   }
   .ft > div > img {
     width: 180px;
+  }
+  .ft > div > p {
+    font-size: var(--font-size5);
   }
   .person_btn {
     display: none;
@@ -467,6 +504,9 @@
   .signup:hover {
     background-color: white;
     color: var(--font-color1);
+  }
+  .shortcut_btn {
+    margin-top: 0rem;
   }
 }
 @media (max-width: 460px) {

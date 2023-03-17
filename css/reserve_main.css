@@ -25,6 +25,9 @@ img {
   width: calc(100% - 2rem);
   margin: auto;
 }
+.sec {
+  border: 1px solid var(--font-color1);
+}
 @media (min-width: 800px) {
   .location {
     background-image: url(../imges/reservation_main_banner.jpg);
@@ -59,7 +62,7 @@ img {
     font-family: "Noto Sans KR";
     font-size: var(--font-size1);
     font-weight: 300;
-    line-height: 40px;
+    line-height: 30px;
     padding: 0 2rem;
   }
   .title_list > li:hover {
@@ -88,7 +91,7 @@ img {
     content: "";
     position: absolute;
     top: 4%;
-    left: 7.5%;
+    left: 80px;
     width: 1px;
     height: 40px;
     background-color: white;
@@ -144,6 +147,7 @@ img {
     color: var(--font-color1);
   }
   .calendar {
+    display: block;
     width: 40%;
   }
   .detail {
@@ -338,7 +342,7 @@ img {
     max-height: 0px;
     overflow: hidden;
 
-    transition: all 0.3s;
+    transition: all 1s;
   }
   .person > li.on .sec {
     display: block;
@@ -414,6 +418,15 @@ img {
     padding: 0 1.5rem;
     cursor: pointer;
   }
+  .sub_title_list > span::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    left: 70px;
+    width: 1px;
+    height: 35px;
+    background-color: white;
+  }
   .sub_title_list > span:nth-of-type(1) {
     padding-left: 0;
   }
@@ -442,6 +455,10 @@ img {
     width: calc(100% - 2rem);
     margin: auto;
     min-height: 1200px;
+  }
+  .calendar {
+    width: 100%;
+    height: 400px;
   }
   h3 {
     background-color: white;
@@ -546,6 +563,7 @@ img {
   }
   .sec3 {
     width: 100%;
+    min-height: 1200px;
   }
   .sec3 h4 {
     width: 100%;
@@ -636,7 +654,7 @@ img {
   }
   .team > li.on .sec {
     display: block;
-    max-height: 1200px;
+    max-height: 1800px;
   }
   .ft {
     margin-top: 300px;
@@ -655,6 +673,8 @@ img {
 @media (max-width: 460px) { 
   .title_list > li > a {
     font-size: var(--font-size5);
+    line-height: 40px;
+    padding: 0 0.25rem;
   }
   .h3 {
     font-size: var(--font-size5);
@@ -670,10 +690,13 @@ img {
     flex-direction: column;
   }
   .detail.personnel h4 {
+    width: 90%;
     max-width: 90%;
   }
   .detail.personnel p {
     font-size: 10px;
+    width: 90%;
+
   }
   .input--kaede {
     width: 100%;
@@ -686,7 +709,19 @@ img {
     flex-direction: column;
     gap: 0rem;
   }
-  .info_agree_contents h5 {
+  .info_agree_contents p h5 {
+    font-size: var(--font-size5);
+  }
+  .info_agree_contents p strong{
+    font-size: var(--font-size5);
+    padding: 0.5rem 1rem;
+  }
+  .info_agree_contents p span{
+    font-size: var(--font-size5);
+
+    padding: 0.25rem 1rem;
+  }
+  .info_agree label {
     font-size: var(--font-size4);
   }
 }
