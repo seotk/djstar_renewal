@@ -30,6 +30,7 @@
   box-sizing: border-box;
   overflow: hidden;
   font-weight: normal;
+  z-index: 10;
   /* border-radius: var(--calendar-border-radius); */
 }
 

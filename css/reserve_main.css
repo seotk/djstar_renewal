@@ -75,18 +75,16 @@ img {
     margin-top: 2rem;
     position: relative;
   }
-  .sub_title_list > button {
-    outline: none;
-    background-color: transparent;
+  .sub_title_list > span {
     color: white;
-    border: none;
     font-size: 32px;
     padding: 0 1.5rem;
+    cursor: pointer;
   }
-  .sub_title_list > button:nth-of-type(1) {
+  .sub_title_list > span:nth-of-type(1) {
     padding-left: 0;
   }
-  .sub_title_list > button::after {
+  .sub_title_list > span::after {
     content: "";
     position: absolute;
     top: 4%;
@@ -95,8 +93,8 @@ img {
     height: 40px;
     background-color: white;
   }
-  .sub_title_list > button.on,
-  .sub_title_list > button:hover {
+  .sub_title_list > span.on,
+  .sub_title_list > span:hover {
     color: var(--font-color2);
   }
 
@@ -114,13 +112,36 @@ img {
   }
   form {
     margin: 2rem 0;
-    min-height: 700px;
-    max-height: 1200px;
+    min-height: 1200px;
+    max-height: 3000px;
+    position: relative;
   }
-  h3 {
+  .item_con {
+  }
+  .item > li.on h3 {
     padding: 1rem 1rem;
     width: 100%;
     background-color: var(--font-color1);
+    display: flex;
+    justify-content: space-between;
+  }
+  .item > li.on > h3 > span:nth-of-type(1) {
+    color: white;
+  }
+  h3 {
+    background-color: white;
+    padding: 1rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid var(--font-color1);
+    cursor: pointer;
+  }
+  h3 > span:nth-of-type(1) {
+    color: var(--font-color1);
+  }
+  h3 > span:nth-of-type(2) {
+    color: var(--font-color1);
   }
   .calendar {
     width: 40%;
@@ -172,11 +193,19 @@ img {
   .detail.personnel button {
     display: inline-block;
   }
+  .item_con {
+    position: relative;
+  }
   .item.on {
     display: block;
   }
   .item {
+    position: absolute;
     display: none;
+  }
+  .team {
+    top: 0;
+    left: 0;
   }
   .title {
     display: flex;
@@ -245,7 +274,8 @@ img {
   .input--ruri {
     margin: 1rem;
   }
-  .person {
+  .person,
+  .team {
     margin-top: 2rem;
   }
   .sec3_contents > * {
@@ -314,9 +344,16 @@ img {
     display: block;
     max-height: 800px;
   }
+  .team > li.on .sec {
+    display: block;
+    max-height: 1200px;
+  }
+  .ft {
+    margin-top: 300px;
+  }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .location {
     background-image: url(../imges/reservation_main_banner.jpg);
     background-color: rgba(0, 0, 0, 0.4);
@@ -338,6 +375,7 @@ img {
   .title_list {
     display: flex;
     padding-top: 2rem;
+    max-width: 90%;
   }
   .title_list > li {
     border: 2px solid var(--font-color2);
@@ -365,16 +403,18 @@ img {
   .sub_title_list {
     margin-top: 2rem;
     position: relative;
+    max-width: 90%;
   }
-  .sub_title_list > button {
+  .sub_title_list > span {
     outline: none;
     background-color: transparent;
     color: white;
     border: none;
     font-size: 24px;
     padding: 0 1.5rem;
+    cursor: pointer;
   }
-  .sub_title_list > button:nth-of-type(1) {
+  .sub_title_list > span:nth-of-type(1) {
     padding-left: 0;
   }
   /* .sub_title_list > button::after {
@@ -386,8 +426,267 @@ img {
     height: 40px;
     background-color: white;
   } */
-  .sub_title_list > button.on,
-  .sub_title_list > button:hover {
+  .sub_title_list > span.on,
+  .sub_title_list > span:hover {
     color: var(--font-color2);
+  }
+  .sec > div {
+    /* max-width: 1200px;
+    width: calc(100% - 2rem);
+    margin: auto; */
+    border: 1px solid rebeccapurple;
+    background-color: #eaeaea;
+  }
+  form {
+    max-width: 90%;
+    width: calc(100% - 2rem);
+    margin: auto;
+    min-height: 1200px;
+  }
+  h3 {
+    background-color: white;
+    padding: 1rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid var(--font-color1);
+    cursor: pointer;
+  }
+  h3 > span:nth-of-type(1) {
+    color: var(--font-color1);
+  }
+  h3 > span:nth-of-type(2) {
+    color: var(--font-color1);
+  }
+  .item > li.on h3 {
+    padding: 1rem 1rem;
+    width: 100%;
+    background-color: var(--font-color1);
+    display: flex;
+    justify-content: space-between;
+  }
+  .item > li.on > h3 > span:nth-of-type(1) {
+    color: white;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--font-color1);
+    border-bottom: 1px solid var(--font-color1);
+    padding: 0.5rem 0;
+    background-color: #99999920;
+    color: black;
+  }
+  .title > span {
+    text-align: center;
+    width: 25%;
+  }
+  .reserve_list {
+    padding: 0.5rem 0;
+  }
+  .reserve_list > label {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    color: black;
+  }
+  .reserve_list > label > span,
+  .reserve_list > label > input {
+    width: 25%;
+  }
+  .reserve_list input {
+    background-color: var(--font-color1);
+    width: 80px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .reserve_list input:hover {
+    background-color: #ffd700;
+  }
+  .detail.personnel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+  .detail.personnel h4 {
+    width: 100%;
+    font-size: var(--font-size1);
+    color: black;
+  }
+  .detail.personnel p {
+    width: 70%;
+    margin-top: 2rem;
+    color: black;
+    font-size: var(--font-size4);
+  }
+  .detail.personnel > input {
+    background-color: var(--font-color1);
+    width: 80px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  .detail.personnel > input:hover {
+    background-color: var(--font-color2);
+  }
+  .detail.personnel span {
+    width: 10%;
+    /* flex-grow: 1; */
+  }
+  .input__label-content {
+    color: black;
+  }
+  .sec3 {
+    width: 100%;
+  }
+  .sec3 h4 {
+    width: 100%;
+    font-size: var(--font-size1);
+    padding: 1rem;
+    color: black;
+  }
+
+  .detail.person_info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .input--ruri {
+    margin: 1rem;
+  }
+  .person,
+  .team {
+    margin-top: 2rem;
+  }
+  .sec3_contents > * {
+    border: 1px solid red;
+  }
+  .sec3_contents {
+    padding: 1rem;
+  }
+  .info_agree_contents {
+    color: black;
+    width: 100%;
+  }
+  .info_agree_contents h5 {
+    font-weight: 700;
+    font-size: var(--font-size2);
+    padding: 1rem;
+  }
+  .info_agree_contents p {
+    display: flex;
+    flex-direction: column;
+  }
+  .info_agree_contents p strong {
+    font-weight: 700;
+    font-size: var(--font-size2);
+    padding: 1rem 2rem;
+  }
+  .info_agree_contents p span {
+    font-weight: 500;
+    font-size: var(--font-size4);
+    padding: 0.25rem 5rem;
+  }
+  .red {
+    color: red;
+  }
+  .info_agree {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info_agree input[type="submit"] {
+    background-color: var(--font-color1);
+    width: 150px;
+    height: 45px;
+    color: white;
+    font-size: var(--font-size2);
+    cursor: pointer;
+    border: none;
+  }
+  .info_agree input[type="submit"]:hover {
+    background-color: var(--font-color2);
+  }
+  .info_agree label {
+    color: black;
+  }
+
+  .sec {
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: all 0.3s;
+  }
+  .person > li.on .sec {
+    display: block;
+    max-height: 800px;
+  }
+  .team > li.on .sec {
+    display: block;
+    max-height: 1200px;
+  }
+  .ft {
+    margin-top: 300px;
+  }
+  .item_con {
+    position: relative;
+  }
+  .item.on {
+    display: block;
+  }
+  .item {
+    position: absolute;
+    display: none;
+  }
+}
+@media (max-width: 460px) { 
+  .title_list > li > a {
+    font-size: var(--font-size5);
+  }
+  .h3 {
+    font-size: var(--font-size5);
+  }
+  h3 > span:nth-of-type(2) {
+    display: none;
+  }
+.person > li.on .sec{
+  max-height: 1600px;
+}
+  .detail.personnel {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail.personnel h4 {
+    max-width: 90%;
+  }
+  .detail.personnel p {
+    font-size: 10px;
+  }
+  .input--kaede {
+    width: 100%;
+  }
+  .sec3_contents h4 {
+    font-size: var(--font-size3);
+  }
+  .detail.person_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .info_agree_contents h5 {
+    font-size: var(--font-size4);
   }
 }

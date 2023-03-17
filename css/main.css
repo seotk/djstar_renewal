@@ -22,7 +22,7 @@ img {
 }
 @media (min-width: 800px) {
   .sec {
-    height: 730px;
+    min-height: 730px;
     display: flex;
     position: relative;
   }
@@ -367,7 +367,7 @@ img {
     max-width: 90%;
     width: calc(100% - 2rem);
     margin: auto;
-    height: 700px;
+    min-height: 700px;
   }
   h2 {
     font-family: "Gowun Dodum";
@@ -402,6 +402,7 @@ img {
     border: 3px solid white;
     margin: 12px 8px;
     cursor: pointer;
+    position: relative;
   }
   #reserve_info {
     margin-left: 0;
@@ -424,6 +425,14 @@ img {
     position: absolute;
     top: 20%;
     right: 0;
+  }
+  .reservation_con #reserve_info > a,
+  .reservation_con #reserve_start > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   #reserve_info:hover,
   #reserve_start:hover {
@@ -451,7 +460,6 @@ img {
     position: relative;
     cursor: pointer;
     transition: 0.3s;
-
   }
   .mo_sub_menu > button:hover {
     background-color: white;
@@ -531,6 +539,10 @@ img {
 }
 @media (max-width: 460px) {
   .sec {
+    max-width: 90%;
+    width: calc(100% - 2rem);
+    margin: auto;
+    min-height: 1200px;
   }
   h2 > span {
     font-size: var(--font-size1);
@@ -540,9 +552,11 @@ img {
     line-height: 70px;
     margin-top: 1rem;
   }
+
   .reservation_con > button {
     width: 160px;
     height: 50px;
+    position: relative;
   }
   .mo_sub_menu {
     gap: 0.25rem;
@@ -550,5 +564,13 @@ img {
   .mo_sub_menu > button {
     width: 150px;
     height: 45px;
+  }
+  .reservation_con #reserve_info > a,
+  .reservation_con #reserve_start > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
