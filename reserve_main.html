@@ -20,8 +20,6 @@
       href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -34,7 +32,8 @@
     <script src="./js/shortcut.js" defer></script>
     <script src="./js/header.js" defer></script>
     <script src="./js/calendar.js" defer></script>
-    <script src="./js/join.js" defer></script>
+    <script src="./js/team_join.js" defer></script>
+    <script src="./js/person_join.js" defer></script>
     <script src="./js/sub_title.js" defer></script>
   </head>
   <body>
@@ -81,16 +80,16 @@
       <span>단체</span>
     </div>
     <div class="item_con mw3">
-      <form action="">
+      <form class="person">
         <ul class="item on person">
           <li class="on">
             <h3>
               <span>1. 날짜 및 회차 선택</span
-              ><span>2023.03.17(토)/3회차/17:00</span>
+              ><span class="summary-info">2023.03.17(토)/3회차/17:00</span>
             </h3>
             <section class="sec sec1">
               <div class="sec1_contents">
-                <div class="calendar"></div>
+                <div class="calendar1"></div>
                 <div class="detail">
                   <p class="title">
                     <span class="t1">회차</span>
@@ -104,7 +103,11 @@
                         <span class="t_t1">1회차</span>
                         <span class="t_t2">15:00</span>
                         <span class="t_t3">12/20</span>
-                        <input type="button" value="선택" name="test" />
+                        <input
+                          type="button"
+                          value="선택"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -112,7 +115,11 @@
                         <span class="t_t1">2회차</span>
                         <span class="t_t2">16:00</span>
                         <span class="t_t3">12/20</span>
-                        <input type="button" value="선택" name="test" />
+                        <input
+                          type="button"
+                          value="선택"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -120,7 +127,11 @@
                         <span class="t_t1">3회차</span>
                         <span class="t_t2">17:00</span>
                         <span class="t_t3">12/20</span>
-                        <input type="button" value="선택" name="test" />
+                        <input
+                          type="button"
+                          value="선택"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -128,7 +139,11 @@
                         <span class="t_t1">4회차</span>
                         <span class="t_t2">19:00</span>
                         <span class="t_t3">12/20</span>
-                        <input type="button" value="선택" name="test" />
+                        <input
+                          type="button"
+                          value="선택"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -139,7 +154,7 @@
                         <input
                           type="button"
                           value="선택"
-                          name="test"
+                          name="person-choose"
                           disabled
                         />
                       </label>
@@ -149,7 +164,11 @@
                         <span class="t_t1">6회차</span>
                         <span class="t_t2">21:00</span>
                         <span class="t_t3">12/20</span>
-                        <input type="button" value="선택" name="test" />
+                        <input
+                          type="button"
+                          value="선택"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                   </ul>
@@ -190,7 +209,11 @@
                       >
                     </label>
                   </span>
-                  <input type="button" value="선택완료" />
+                  <input
+                    type="button"
+                    value="선택완료"
+                    name="person-choose-number"
+                  />
                 </div>
               </div>
             </section>
@@ -331,7 +354,7 @@
           </li>
         </ul>
       </form>
-      <from>
+      <form class="team">
         <ul class="item team">
           <li class="on">
             <h3>
@@ -340,7 +363,7 @@
             </h3>
             <section class="sec sec1">
               <div class="sec1_contents">
-                <div class="calendar"></div>
+                <div class="calendar2"></div>
                 <div class="detail">
                   <p class="title">
                     <span class="t1">회차</span>
@@ -354,7 +377,11 @@
                         <span class="t_t1">1회차</span>
                         <span class="t_t2">15:00</span>
                         <span class="t_t3">최소 20명</span>
-                        <input type="button" value="예약가능" name="test" />
+                        <input
+                          type="button"
+                          value="예약가능"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -362,7 +389,11 @@
                         <span class="t_t1">2회차</span>
                         <span class="t_t2">16:00</span>
                         <span class="t_t3">최소 20명</span>
-                        <input type="button" value="예약가능" name="test" />
+                        <input
+                          type="button"
+                          value="예약가능"
+                          name="teperson-choosest"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -370,7 +401,11 @@
                         <span class="t_t1">3회차</span>
                         <span class="t_t2">17:00</span>
                         <span class="t_t3">최소 20명</span>
-                        <input type="button" value="예약가능" name="test" />
+                        <input
+                          type="button"
+                          value="예약가능"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -378,7 +413,11 @@
                         <span class="t_t1">4회차</span>
                         <span class="t_t2">19:00</span>
                         <span class="t_t3">최소 20명</span>
-                        <input type="button" value="예약가능" name="test" />
+                        <input
+                          type="button"
+                          value="예약가능"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                     <li class="reserve_list">
@@ -389,7 +428,7 @@
                         <input
                           type="button"
                           value="예약완료"
-                          name="test"
+                          name="person-choose"
                           disabled
                         />
                       </label>
@@ -399,7 +438,11 @@
                         <span class="t_t1">6회차</span>
                         <span class="t_t2">21:00</span>
                         <span class="t_t3">최소 20명</span>
-                        <input type="button" value="예약가능" name="test" />
+                        <input
+                          type="button"
+                          value="예약가능"
+                          name="person-choose"
+                        />
                       </label>
                     </li>
                   </ul>
@@ -440,7 +483,11 @@
                       >
                     </label>
                   </span>
-                  <input type="button" value="선택완료" />
+                  <input
+                    type="button"
+                    value="선택완료"
+                    name="team-choose-number"
+                  />
                 </div>
               </div>
             </section>
@@ -668,7 +715,7 @@
             </section>
           </li>
         </ul>
-      </from>
+      </form>
     </div>
     <footer class="ft">
       <div class="mw">
@@ -680,7 +727,7 @@
         </p>
         <div class="shortcut">
           <span>바로가기</span>
-          <ul class="shotycut_btn">
+          <ul class="shortcut_btn">
             <li>
               <span>기관사이트 바로가기</span>
               <ul class="shortcut_contents agency">

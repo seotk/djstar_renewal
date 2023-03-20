@@ -115,11 +115,13 @@ img {
   }
   form {
     margin: 2rem 0;
-    min-height: 1200px;
-    max-height: 3000px;
-    position: relative;
+
+    position: absolute;
   }
   .item_con {
+    position: relative;
+    min-height: 1200px;
+    max-height: 3000px;
   }
   .item > li.on h3 {
     padding: 1rem 1rem;
@@ -204,7 +206,7 @@ img {
     display: block;
   }
   .item {
-    position: absolute;
+    position: relative;
     display: none;
   }
   .team {
@@ -670,7 +672,7 @@ img {
     display: none;
   }
 }
-@media (max-width: 460px) { 
+@media (max-width: 460px) {
   .title_list > li > a {
     font-size: var(--font-size5);
     line-height: 40px;
@@ -682,9 +684,9 @@ img {
   h3 > span:nth-of-type(2) {
     display: none;
   }
-.person > li.on .sec{
-  max-height: 1600px;
-}
+  .person > li.on .sec {
+    max-height: 1600px;
+  }
   .detail.personnel {
     display: flex;
     flex-direction: column;
@@ -696,7 +698,6 @@ img {
   .detail.personnel p {
     font-size: 10px;
     width: 90%;
-
   }
   .input--kaede {
     width: 100%;
@@ -712,11 +713,11 @@ img {
   .info_agree_contents p h5 {
     font-size: var(--font-size5);
   }
-  .info_agree_contents p strong{
+  .info_agree_contents p strong {
     font-size: var(--font-size5);
     padding: 0.5rem 1rem;
   }
-  .info_agree_contents p span{
+  .info_agree_contents p span {
     font-size: var(--font-size5);
 
     padding: 0.25rem 1rem;
