@@ -8,6 +8,7 @@ const TChoose = document.getElementsByName("team-choose");
 const TChooseN = document.getElementsByName("team-choose-number");
 const sec2Btn = document.querySelector(".item > input");
 const summaryInfo = document.querySelector(".summary-info");
+const summaryInfo2 = document.querySelector(".summary-info2");
 
 function toggleAccordion(params) {
   const thisItem = this.parentNode;
@@ -33,11 +34,20 @@ function selected(idx) {
   console.log(selectedBtn);
   let summaryText = `${t1[0].innerText}/${t2[0].innerText}`;
   summaryInfo.innerHTML = summaryText;
+  summaryInfo2.innerHTML = summaryText;
+}
+function numbered() {
+  const thisItem = this.parentNode;
+  const NBtn = thisItem.querySelector("#p-number");
+  console.log(NBtn);
+
 }
 function choose1(params) {
   let i = 0;
   $Li[i].classList.remove("on");
   $Li[i + 1].classList.add("on");
+  $Li2[i].classList.remove("on");
+  $Li2[i + 1].classList.add("on");
   // this.classList.remove("on");
   // item.classList.add("on");
 }
@@ -45,6 +55,8 @@ function choose2(params) {
   let i = 1;
   $Li[i].classList.remove("on");
   $Li[i + 1].classList.add("on");
+  $Li2[i].classList.remove("on");
+  $Li2[i + 1].classList.add("on");
   // this.classList.remove("on");
   // item.classList.add("on");
 }
@@ -75,7 +87,9 @@ TChoose.forEach((item) => {
 });
 PChooseN.forEach((item) => {
   item.addEventListener("click", choose2);
+  item.addEventListener("click", numbered);
 });
 TChooseN.forEach((item) => {
   item.addEventListener("click", choose2);
+  item.addEventListener("click", numbered);
 });

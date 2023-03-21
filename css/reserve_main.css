@@ -115,12 +115,12 @@ img {
   }
   form {
     margin: 2rem 0;
-
     position: absolute;
   }
   .item_con {
+    margin: auto;
     position: relative;
-    min-height: 1200px;
+    min-height: 1500px;
     max-height: 3000px;
   }
   .item > li.on h3 {
@@ -148,7 +148,8 @@ img {
   h3 > span:nth-of-type(2) {
     color: var(--font-color1);
   }
-  .calendar {
+  .calendar1,
+  .calendar2 {
     display: block;
     width: 40%;
   }
@@ -198,9 +199,6 @@ img {
   }
   .detail.personnel button {
     display: inline-block;
-  }
-  .item_con {
-    position: relative;
   }
   .item.on {
     display: block;
@@ -352,7 +350,7 @@ img {
   }
   .team > li.on .sec {
     display: block;
-    max-height: 1200px;
+    max-height: 1500px;
   }
   .ft {
     margin-top: 300px;
@@ -432,35 +430,28 @@ img {
   .sub_title_list > span:nth-of-type(1) {
     padding-left: 0;
   }
-  /* .sub_title_list > button::after {
-    content: "";
-    position: absolute;
-    top: 4%;
-    left: 10%;
-    width: 1px;
-    height: 40px;
-    background-color: white;
-  } */
   .sub_title_list > span.on,
   .sub_title_list > span:hover {
     color: var(--font-color2);
   }
-  .sec > div {
-    /* max-width: 1200px;
-    width: calc(100% - 2rem);
-    margin: auto; */
-    border: 1px solid rebeccapurple;
+  .item_con {
+    position: relative;
+    margin: auto;
+    min-height: 1800px;
+    width: 90%;
+    max-width: calc(100% - 2rem);
+  }
+  .form {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+  }
+  .item {
+    display: none;
     background-color: #eaeaea;
   }
-  form {
-    max-width: 90%;
-    width: calc(100% - 2rem);
-    margin: auto;
-    min-height: 1200px;
-  }
-  .calendar {
-    width: 100%;
-    height: 400px;
+  .item.on {
+    display: block;
   }
   h3 {
     background-color: white;
@@ -487,6 +478,12 @@ img {
   .item > li.on > h3 > span:nth-of-type(1) {
     color: white;
   }
+  .detail {
+    border: 1px solid red;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: black;
+  }
   .title {
     display: flex;
     justify-content: space-between;
@@ -494,7 +491,6 @@ img {
     border-bottom: 1px solid var(--font-color1);
     padding: 0.5rem 0;
     background-color: #99999920;
-    color: black;
   }
   .title > span {
     text-align: center;
@@ -508,7 +504,6 @@ img {
     justify-content: space-between;
     text-align: center;
     border-bottom: 1px solid gray;
-    color: black;
   }
   .reserve_list > label > span,
   .reserve_list > label > input {
@@ -537,13 +532,10 @@ img {
   .detail.personnel h4 {
     width: 100%;
     font-size: var(--font-size1);
-    color: black;
   }
   .detail.personnel p {
     width: 70%;
     margin-top: 2rem;
-    color: black;
-    font-size: var(--font-size4);
   }
   .detail.personnel > input {
     background-color: var(--font-color1);
@@ -558,14 +550,9 @@ img {
   }
   .detail.personnel span {
     width: 10%;
-    /* flex-grow: 1; */
-  }
-  .input__label-content {
-    color: black;
   }
   .sec3 {
     width: 100%;
-    min-height: 1200px;
   }
   .sec3 h4 {
     width: 100%;
@@ -573,26 +560,12 @@ img {
     padding: 1rem;
     color: black;
   }
-
   .detail.person_info {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 1rem;
-  }
-  .input--ruri {
-    margin: 1rem;
-  }
-  .person,
-  .team {
-    margin-top: 2rem;
-  }
-  .sec3_contents > * {
-    border: 1px solid red;
-  }
-  .sec3_contents {
-    padding: 1rem;
   }
   .info_agree_contents {
     color: black;
@@ -643,33 +616,18 @@ img {
   .info_agree label {
     color: black;
   }
-
   .sec {
     max-height: 0px;
     overflow: hidden;
-
-    transition: all 0.3s;
+    transition: all 1s;
   }
   .person > li.on .sec {
     display: block;
-    max-height: 800px;
+    max-height: 1200px;
   }
   .team > li.on .sec {
     display: block;
-    max-height: 1800px;
-  }
-  .ft {
-    margin-top: 300px;
-  }
-  .item_con {
-    position: relative;
-  }
-  .item.on {
-    display: block;
-  }
-  .item {
-    position: absolute;
-    display: none;
+    max-height: 1500px;
   }
 }
 @media (max-width: 460px) {
@@ -682,22 +640,26 @@ img {
     font-size: var(--font-size5);
   }
   h3 > span:nth-of-type(2) {
-    display: none;
   }
-  .person > li.on .sec {
-    max-height: 1600px;
-  }
+
   .detail.personnel {
     display: flex;
     flex-direction: column;
+    border: 1px solid  red ;
+  }
+  .detail.personnel >*{
+    border: 1px solid  red ;
+
   }
   .detail.personnel h4 {
-    width: 90%;
-    max-width: 90%;
+    width: 95%;
   }
   .detail.personnel p {
     font-size: 10px;
-    width: 90%;
+    width: 95%;
+  }
+  .detail.personnel span {
+    width: 30%;
   }
   .input--kaede {
     width: 100%;

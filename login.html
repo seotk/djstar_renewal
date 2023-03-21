@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/my_reset.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/header_footer.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/shortcut.js" defer></script>
+    <script src="./js/header.js" defer></script>
+  </head>
+  <body>
+    <header class="hd">
+      <div class="mw">
+        <ul class="top_info">
+          <li class="top_info_title">관람시간</li>
+          <li class="top_info_text">
+            OPEN 14:00 / CLOSE 22:00 / 입장마감 21:50
+          </li>
+          <li class="top_info_title">휴관일</li>
+          <li class="top_info_text">
+            매주 월요일 / 공휴일 다음날 / 명절 및 신정 연휴
+          </li>
+          <li class="top_info_title">이용요금</li>
+          <li class="top_info_text">무료</li>
+        </ul>
+      </div>
+      <nav class="nav mw">
+        <h1>
+          <a href="./index.html"><img src="./imges/logo.png" alt="logo" /></a>
+        </h1>
+        <ul class="gnb_list">
+          <!-- <li>
+          <a href="#">천문대 소개 </a>
+          <ul class="sub_list">-->
+        </ul>
+        <div class="person_menu">
+          <!-- <a href="./login.html"><button class="person_btn login">로그인</button> -->
+        </div>
+      </nav>
+      <nav class="mo_nav">
+        <div class="mo_person_menu">
+          <!-- <a href="#"><button class="person_btn login">로그인</button></a> -->
+        </div>
+        <ul class="mo_gnb_list">
+          <!-- <li>
+          <a href="#">천문대 소개 </a>
+          <ul class="sub_list">-->
+        </ul>
+      </nav>
+    </header>
+    <a href="https://front.codes/" class="logo" target="_blank">
+      <img src="https://assets.codepen.io/1462889/fcy.png" alt="" />
+    </a>
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <h6 class="mb-0 pb-3">
+                <span>Log In </span><span>Sign Up</span>
+              </h6>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            name="logemail"
+                            class="form-style"
+                            placeholder="Your Email"
+                            id="logemail"
+                            autocomplete="off"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            name="logpass"
+                            class="form-style"
+                            placeholder="Your Password"
+                            id="logpass"
+                            autocomplete="off"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <a href="#" class="btn mt-4">submit</a>
+                        <p class="mb-0 mt-4 text-center">
+                          <a href="#0" class="link">Forgot your password?</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Sign Up</h4>
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            name="logname"
+                            class="form-style"
+                            placeholder="Your Full Name"
+                            id="logname"
+                            autocomplete="off"
+                          />
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="email"
+                            name="logemail"
+                            class="form-style"
+                            placeholder="Your Email"
+                            id="logemail"
+                            autocomplete="off"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            name="logpass"
+                            class="form-style"
+                            placeholder="Your Password"
+                            id="logpass"
+                            autocomplete="off"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <a href="#" class="btn mt-4">submit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="ft">
+      <div class="mw">
+        <img src="./imges/logo.png" alt="logo" />
+        <p>
+          (34128) 대전광역시 유성구 과학로 213-48 (신성동 7-13) <br />
+          TEL. 042-863-8762, 8763 FAX. 042-863-8761 <br />
+          Copyright © 2017 Daejeon Observatory. All rights reserved
+        </p>
+        <div class="shortcut">
+          <span>바로가기</span>
+          <ul class="shortcut_btn">
+            <li>
+              <span>기관사이트 바로가기</span>
+              <ul class="shortcut_contents agency">
+                <li><a href="#">대전광역시</a></li>
+                <li><a href="#">한국천문연구원</a></li>
+                <li><a href="#">국립중앙과학관</a></li>
+                <li><a href="#">(사)한국천문우주과학관협회</a></li>
+                <li><a href="#">대덕연구개발특구</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>지역별천문대 바로가기</span>
+              <ul class="shortcut_contents region">
+                <li><a href="#">별마로천문대</a></li>
+                <li><a href="#">김해천문대</a></li>
+                <li><a href="#">곡성섬진강천문대</a></li>
+                <li><a href="#">국토정중앙천문대</a></li>
+                <li><a href="#">소백산천문대</a></li>
+                <li><a href="#">충주고구려천문과학관</a></li>
+                <li><a href="#">칠갑산천문대</a></li>
+                <li><a href="#">보현산천문대</a></li>
+                <li><a href="#">예천천문우주센터</a></li>
+                <li><a href="#">서귀포천문과학문화관</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>카페 바로가기</span>
+              <ul class="shortcut_contents cafe">
+                <li><a href="#">별이 가득한 하늘놀이터</a></li>
+                <li><a href="#">대전시민천문대 어린이합창단</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -31,7 +31,8 @@
     <script src="./js/accordion.js" defer></script>
     <script src="./js/shortcut.js" defer></script>
     <script src="./js/header.js" defer></script>
-    <script src="./js/calendar.js" defer></script>
+    <script src="./js/calendar1.js" defer></script>
+    <script src="./js/calendar2.js" defer></script>
     <script src="./js/team_join.js" defer></script>
     <script src="./js/person_join.js" defer></script>
     <script src="./js/sub_title.js" defer></script>
@@ -80,12 +81,12 @@
       <span>단체</span>
     </div>
     <div class="item_con mw3">
-      <form class="person">
+      <form class="form preson-from">
         <ul class="item on person">
           <li class="on">
             <h3>
               <span>1. 날짜 및 회차 선택</span
-              ><span class="summary-info">2023.03.17(토)/3회차/17:00</span>
+              ><span class="summary-info"></span>
             </h3>
             <section class="sec sec1">
               <div class="sec1_contents">
@@ -187,7 +188,7 @@
                     방문 예정일 1일 전까지는 변경 및 취소가 가능합니다. <br />
                     관람 예약은 신청 가능 날짜에서 한 번만 신청하실 수 있습니다.
                     <br />
-                    개인 관람예약은 최대 10명까지 가능하며 10명 초과시 단체
+                    개인 관람예약은 최대 19명까지 가능하며 19명 초과시 단체
                     관람으로 예약해주기길 바랍니다. <br />
                     입장 마감시간은 예약시간 이후 10분 뒤 입니다<br />
                     이 외의 내용은 대전시민천문대에 문의전화로 문의하시길
@@ -196,7 +197,9 @@
                   <span class="input input--kaede">
                     <input
                       class="input__field input__field--kaede"
-                      type="text"
+                      type="number"
+                      max="19"
+                      min="1"
                       id="person-number"
                     />
                     <label
@@ -213,6 +216,7 @@
                     type="button"
                     value="선택완료"
                     name="person-choose-number"
+                    id="p-number"
                   />
                 </div>
               </div>
@@ -354,12 +358,12 @@
           </li>
         </ul>
       </form>
-      <form class="team">
+      <form class="form team-from">
         <ul class="item team">
           <li class="on">
             <h3>
               <span>1. 날짜 및 회차 선택</span
-              ><span>2023.03.17(토)/3회차/17:00</span>
+              ><span class="summary-info2"></span>
             </h3>
             <section class="sec sec1">
               <div class="sec1_contents">
@@ -380,7 +384,7 @@
                         <input
                           type="button"
                           value="예약가능"
-                          name="person-choose"
+                          name="team-choose"
                         />
                       </label>
                     </li>
@@ -392,7 +396,7 @@
                         <input
                           type="button"
                           value="예약가능"
-                          name="teperson-choosest"
+                          name="team-choose"
                         />
                       </label>
                     </li>
@@ -404,7 +408,7 @@
                         <input
                           type="button"
                           value="예약가능"
-                          name="person-choose"
+                          name="team-choose"
                         />
                       </label>
                     </li>
@@ -416,7 +420,7 @@
                         <input
                           type="button"
                           value="예약가능"
-                          name="person-choose"
+                          name="team-choose"
                         />
                       </label>
                     </li>
@@ -428,7 +432,7 @@
                         <input
                           type="button"
                           value="예약완료"
-                          name="person-choose"
+                          name="team-choose"
                           disabled
                         />
                       </label>
@@ -441,7 +445,7 @@
                         <input
                           type="button"
                           value="예약가능"
-                          name="person-choose"
+                          name="team-choose"
                         />
                       </label>
                     </li>

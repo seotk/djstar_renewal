@@ -65,12 +65,12 @@ function CalendarControl() {
       calendarControl.attachEventsOnNextPrev();
     },
     displayYear: function () {
-      let yearLabel = document.querySelector(".calendar .calendar-year-label");
+      let yearLabel = document.querySelector(".calendar1 .calendar-year-label");
       yearLabel.innerHTML = calendar.getFullYear();
     },
     displayMonth: function () {
       let monthLabel = document.querySelector(
-        ".calendar .calendar-month-label"
+        ".calendar1 .calendar-month-label"
       );
       monthLabel.innerHTML = calendarControl.calMonthName[calendar.getMonth()];
     },
@@ -108,12 +108,12 @@ function CalendarControl() {
     plotDayNames: function () {
       for (let i = 0; i < calendarControl.calWeekDays.length; i++) {
         document.querySelector(
-          ".calendar .calendar-body"
+          ".calendar1 .calendar-body"
         ).innerHTML += `<div>${calendarControl.calWeekDays[i]}</div>`;
       }
     },
     plotDates: function () {
-      document.querySelector(".calendar .calendar-body").innerHTML = "";
+      document.querySelector(".calendar1 .calendar-body").innerHTML = "";
       calendarControl.plotDayNames();
       calendarControl.displayMonth();
       calendarControl.displayYear();
@@ -132,19 +132,19 @@ function CalendarControl() {
         if (i < calendarControl.firstDayNumber()) {
           prevDateCount += 1;
           document.querySelector(
-            ".calendar .calendar-body"
+            ".calendar1 .calendar-body"
           ).innerHTML += `<div class="prev-dates"></div>`;
           prevMonthDatesArray.push(calendarControl.prevMonthLastDate--);
         } else {
           document.querySelector(
-            ".calendar .calendar-body"
+            ".calendar1 .calendar-body"
           ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="#">${count++}</a></div>`;
         }
       }
       //remaining dates after month dates
       for (let j = 0; j < prevDateCount + 1; j++) {
         document.querySelector(
-          ".calendar .calendar-body"
+          ".calendar1 .calendar-body"
         ).innerHTML += `<div class="number-item" data-num=${count}><a class="dateNumber" href="#">${count++}</a></div>`;
       }
       calendarControl.highlightToday();
@@ -152,10 +152,10 @@ function CalendarControl() {
       calendarControl.plotNextMonthDates();
     },
     attachEvents: function () {
-      let prevBtn = document.querySelector(".calendar .calendar-prev a");
-      let nextBtn = document.querySelector(".calendar .calendar-next a");
-      let todayDate = document.querySelector(".calendar .calendar-today-date");
-      let dateNumber = document.querySelectorAll(".calendar .dateNumber");
+      let prevBtn = document.querySelector(".calendar1 .calendar-prev a");
+      let nextBtn = document.querySelector(".calendar1 .calendar-next a");
+      let todayDate = document.querySelector(".calendar1 .calendar-today-date");
+      let dateNumber = document.querySelectorAll(".calendar1 .dateNumber");
       prevBtn.addEventListener(
         "click",
         calendarControl.navigateToPreviousMonth

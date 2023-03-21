@@ -1,4 +1,4 @@
-const TForm = document.querySelector("form.team");
+const TForm = document.querySelector(".team-from");
 const TNumber = document.querySelector("#team-number");
 const TUsername = document.querySelector("#team-Username");
 const TContact = document.querySelector("#team-Contact");

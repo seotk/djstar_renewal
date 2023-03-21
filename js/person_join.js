@@ -1,4 +1,4 @@
-const PForm = document.querySelector("form.person");
+const PForm = document.querySelector(".preson-from");
 const PNumber = document.querySelector("#person-number");
 const PUsername = document.querySelector("#person-Username");
 const PContact = document.querySelector("#person-Contact");
@@ -16,16 +16,15 @@ const PemailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const PpasswordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*?])[A-Za-z\d!@#$%^&*?]{8,20}$/;
 
-  // let selected = false;
-  // for (let i = 0; i < PChoose.length; i++) {
-  //   if (PChoose[i].checked) {
-  //     selected = true;
-  //     break;
-  //   }
-  // }
+// let selected = false;
+// for (let i = 0; i < PChoose.length; i++) {
+//   if (PChoose[i].checked) {
+//     selected = true;
+//     break;
+//   }
+// }
 PForm.addEventListener("submit", (e) => {
   let errors = false; // 오류 여부 변수 초기화
-
 
   if (!selected) {
     // 선택되지 않았을 때 오류 메세지 출력
@@ -77,17 +76,3 @@ PForm.addEventListener("submit", (e) => {
   }
 });
 
-// // PChoose 버튼 클릭 시 실행될 함수
-// function selectTime() {
-//   console.log("a");
-//   // 첫번째 li에서 on 클래스 제거
-//   document.querySelector("li").classList.remove("on");
-
-//   // 두번째 li에 on 클래스 추가
-//   document.querySelectorAll("li")[1].classList.add("on");
-// }
-
-// // 각 PChoose 버튼에 클릭 이벤트 리스너 추가
-// for (let i = 0; i < PChoose.length; i++) {
-//   PChoose[i].addEventListener("click", selectTime);
-// }

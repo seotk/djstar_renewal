@@ -46,7 +46,7 @@ const GNB = `<li>
   <li><a href="#">행사사진</a></li>
 </ul>
 </li>`;
-const PERSON = `            <button class="person_btn login"><span>로그인</span><a href="#"></a></button>
+const PERSON = `            <button class="person_btn login"><span>로그인</span><a href="./login.html"></a></button>
 <button class="person_btn signup"><span>회원가입</span><a href="#"></a></button>
 <i class="fa-solid fa-bars"></i>`;
 gnbList.innerHTML = GNB;
