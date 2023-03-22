@@ -1,0 +1,87 @@
+@charset 'utf-8';
+
+:root {
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  color: white;
+  --font-size1: 22px;
+  --font-size2: 18px;
+  --font-size3: 16px;
+  --font-size4: 14px;
+  --font-size5: 12px;
+  --font-size6: 28px;
+  --font-size7: 60px;
+  --font-color1: #284372;
+  --font-color2: #ffd700;
+}
+img {
+  width: 100%;
+}
+.wrap {
+  overflow: hidden;
+}
+.mw3 {
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: auto;
+}
+.location {
+  background-image: url(../imges/reservation_main_banner.jpg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+.location h2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  line-height: 250px;
+  font-size: 48px;
+}
+.title_list {
+  display: flex;
+  padding-top: 2rem;
+}
+.title_list > li {
+  border: 2px solid var(--font-color2);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40px;
+  text-align: center;
+}
+.title_list > li > a {
+  color: white;
+  font-family: "Noto Sans KR";
+  font-size: var(--font-size1);
+  font-weight: 300;
+  line-height: 30px;
+  padding: 0 2rem;
+}
+.title_list > li:hover {
+  background-color: var(--font-color2);
+}
+.title_list > li.on {
+  background-color: var(--font-color1);
+}
+.title_list > li.on > a {
+  color: var(--font-color2);
+}
+.reservation_check_con {
+  height: 500px;
+  background-color: #eaeaea;
+  border: 1px solid red;
+}
+.reservation_check {
+  border-radius: 5px;
+  border: 1px solid var(--font-color1);
+  box-shadow: 0px 0px 5px black;
+  margin-top: 2rem;
+}
+.reservation_check > * {
+  color: black;
+  border: 1px solid red;
+}

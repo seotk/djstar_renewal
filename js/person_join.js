@@ -6,6 +6,8 @@ const PEmail = document.querySelector("#person-Email");
 const PPassword = document.querySelector("#person-Password");
 const PConfirmPassword = document.querySelector("#person-PasswordConfirm");
 const Pagree = document.querySelector("#person-agree");
+const PdivElement = document.querySelector("div.modal_con");
+
 // const PChoose = document.getElementsByName("person-choose");
 
 // 이메일 정규식 패턴
@@ -73,6 +75,13 @@ PForm.addEventListener("submit", (e) => {
   }
   if (errors) {
     e.preventDefault(); //폼 제출 취소
+  } else {
+    e.preventDefault(); // 기본 동작 방지
+
+    // div의 클래스명이 "m"인 요소 선택
+    const divElement = document.querySelector("div.modal_con");
+
+    // "on" 클래스 추가
+    divElement.classList.add("on");
   }
 });
-

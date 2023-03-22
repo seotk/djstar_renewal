@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./css/reserve_main.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
     <link rel="stylesheet" href="./css/input.css" />
+    <link rel="stylesheet" href="./css/ticket.css" />
     <script src="./js/accordion.js" defer></script>
     <script src="./js/shortcut.js" defer></script>
     <script src="./js/header.js" defer></script>
@@ -351,7 +352,7 @@
                   >
                   <span class="error" id="person-agree-error"></span>
                   <input type="radio" name="" id="person-agree" />
-                  <input type="submit" value="예약신청" />
+                  <input type="submit" value="예약신청" class="submit" />
                 </div>
               </div>
             </section>
@@ -713,13 +714,45 @@
                     >위 내용에 동의하며 개인정보를 제공합니다.</label
                   >
                   <input type="radio" name="" id="team-agree" />
-                  <input type="submit" value="예약신청" />
+                  <input type="submit" value="예약신청" class="submit" />
                 </div>
               </div>
             </section>
           </li>
         </ul>
       </form>
+    </div>
+    <div class="modal_con">
+      <div class="modal">
+        <div class="ticket">
+          <div class="ticket_txt">
+            <strong>개인관람 예약 확인</strong>
+            <p>
+              <span>2023.03.06(월) / 3회차 / 19:00</span>
+              <span>예약자명 : 서태규(개인)</span>
+              <span>인원 : 8명</span>
+              <span>연락처 : 010-1234-5678</span>
+            </p>
+            <a href="./reserve_finish.html">예약내역확인</a>
+            <a href="./index.html">홈으로</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal">
+        <div class="ticket">
+          <div class="ticket_txt">
+            <strong>개인관람 예약 확인</strong>
+            <p>
+              <span>2023.03.06(월) / 3회차 / 19:00</span>
+              <span>예약자명 : 서태규(개인)</span>
+              <span>인원 : 8명</span>
+              <span>연락처 : 010-1234-5678</span>
+            </p>
+            <a href="./reserve_finish.html">예약내역확인</a>
+            <a href="./index.html">홈으로</a>
+          </div>
+        </div>
+      </div> -->
     </div>
     <footer class="ft">
       <div class="mw">

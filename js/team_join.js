@@ -76,5 +76,5 @@ TForm.addEventListener("submit", (e) => {
 
   if (errors) {
     e.preventDefault(); //폼 제출 취소
-  }
+  } 
 });

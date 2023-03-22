@@ -36,6 +36,10 @@ body {
   h4 {
     font-weight: 600;
   }
+  h6 {
+    display: flex;
+    justify-content: center;
+  }
   h6 span {
     padding: 0 20px;
     text-transform: uppercase;
@@ -96,6 +100,7 @@ body {
     position: relative;
     width: 440px;
     max-width: 100%;
+    margin: auto;
     height: 400px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -105,6 +110,7 @@ body {
   .card-3d-wrapper {
     width: 100%;
     height: 100%;
+    margin: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -157,7 +163,6 @@ body {
   }
   .form-style {
     padding: 13px 20px;
-    padding-left: 55px;
     height: 48px;
     width: 100%;
     font-weight: 500;
