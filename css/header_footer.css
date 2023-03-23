@@ -18,7 +18,7 @@
   overflow: hidden;
 }
 /* ================================================pc======================================= */
-@media (min-width: 800px) {
+@media (min-width: 811px) {
   .mw {
     max-width: 1440px;
     width: calc(100% - 2rem);
@@ -358,7 +358,7 @@
   }
 }
 /* ================================================moblie======================================= */
-@media (max-width: 800px) {
+@media (max-width: 811px) {
   .hd {
     height: 115px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -394,7 +394,6 @@
     align-items: center;
     height: 75px;
     flex-grow: 1;
-    border: 1px solid red;
     max-width: 90%;
     width: calc(100% - 2rem);
     margin: auto;
