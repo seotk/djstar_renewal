@@ -465,12 +465,12 @@
   }
   .mo_gnb_list > li {
     position: relative;
-    padding: 1rem;
+    padding: 0.25rem 1rem;
   }
   .mo_gnb_list > li > a {
     color: var(--font-color1);
     background-color: #ffd700;
-    margin: 0.5rem;
+    margin: 0.25rem;
     padding: 0.25rem 0.5rem;
     border-radius: 10px;
   }
