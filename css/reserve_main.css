@@ -111,7 +111,6 @@ img {
     background-color: #eaeaea;
   }
   .sec > * {
-    border: 1px solid red;
   }
   form {
     margin: 2rem 0;
@@ -283,7 +282,6 @@ img {
     margin-top: 2rem;
   }
   .sec3_contents > * {
-    border: 1px solid red;
   }
   .sec3_contents {
     padding: 1rem;
@@ -479,7 +477,6 @@ img {
     color: white;
   }
   .detail {
-    border: 1px solid red;
     width: 100%;
     padding: 1rem 2rem;
     color: black;
@@ -645,10 +642,8 @@ img {
   .detail.personnel {
     display: flex;
     flex-direction: column;
-    border: 1px solid  red ;
   }
   .detail.personnel >*{
-    border: 1px solid  red ;
 
   }
   .detail.personnel h4 {
