@@ -30,106 +30,219 @@ img {
   width: calc(100% - 2rem);
   margin: auto;
 }
-.location {
-  background-image: url(../imges/reservation_main_banner.jpg);
-  background-color: rgba(0, 0, 0, 0.4);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 250px;
-}
-.location h2 {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  line-height: 250px;
-  font-size: 48px;
-}
-.title_list {
-  display: flex;
-  padding-top: 2rem;
-}
-.title_list > li {
-  border: 2px solid var(--font-color2);
-  background-color: rgba(0, 0, 0, 0.6);
-  height: 40px;
-  text-align: center;
-}
-.title_list > li > a {
-  color: white;
-  font-family: "Noto Sans KR";
-  font-size: var(--font-size1);
-  font-weight: 300;
-  line-height: 30px;
-  padding: 0 2rem;
-}
-.title_list > li:hover {
-  background-color: var(--font-color2);
-}
-.title_list > li.on {
-  background-color: var(--font-color1);
-}
-.title_list > li.on > a {
-  color: var(--font-color2);
-}
-.reservation_check_con {
-  min-height: 700px;
-  max-height: 800px;
-  background-color:#28437280;
-  margin-top: 2rem;
-  padding-top: 3rem;
-  border-radius: 10px;
-}
-.ft {
-  position: relative;
-  margin-top: 50px;
-}
-.reservation_check {
-  border-radius: 10px;
-  border: 1px solid var(--font-color1);
-  box-shadow: 0px 0px 5px black;
-  width: 50%;
-  margin: auto;
-  margin-top: 2rem;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.reservation_check > * {
-  color: black;
-}
-.reservation_check > strong {
-  font-size: var(--font-size2);
-  font-weight: 500;
-  width: 100%;
-  padding: 0.5rem 0;
-  margin-left: 1rem;
-}
-.reservation_check > p {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid var(--font-color1);
-  border-top: 1px solid var(--font-color1);
-  width: 100%;
-  padding: 0.5rem;
-}
-.reservation_check > a {
-  text-align: center;
-  font-size: var(--font-size2);
-  font-weight: 500;
-  width: 50%;
-  padding-top: 0.5rem;
-}
-.reservation_check > a:nth-of-type(2) {
-  border-left: 1px solid var(--font-color1)   ;
+
+@media (min-width: 800px) {
+  .location {
+    background-image: url(../imges/reservation_main_banner.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+  }
+  .location h2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 250px;
+    font-size: 48px;
+  }
+  .title_list {
+    display: flex;
+    padding-top: 2rem;
+  }
+  .title_list > li {
+    border: 2px solid var(--font-color2);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    text-align: center;
+  }
+  .title_list > li > a {
+    color: white;
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size1);
+    font-weight: 300;
+    line-height: 30px;
+    padding: 0 2rem;
+  }
+  .title_list > li:hover {
+    background-color: var(--font-color2);
+  }
+  .title_list > li.on {
+    background-color: var(--font-color1);
+  }
+  .title_list > li.on > a {
+    color: var(--font-color2);
+  }
+  .reservation_check_con {
+    min-height: 700px;
+    max-height: 800px;
+    background-color: #28437280;
+    margin-top: 2rem;
+    padding-top: 3rem;
+    border-radius: 10px;
+  }
+  .ft {
+    position: relative;
+    margin-top: 50px;
+  }
+  .reservation_check {
+    border-radius: 10px;
+    border: 1px solid var(--font-color1);
+    box-shadow: 0px 0px 5px black;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .reservation_check > * {
+    color: black;
+  }
+  .reservation_check > strong {
+    font-size: var(--font-size2);
+    font-weight: 500;
+    width: 100%;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    background-color: var(--font-color2);
+    color: var(--font-color1);
+    border-radius: 10px 10px 0 0;
+  }
+  .reservation_check > p {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--font-color1);
+    border-top: 1px solid var(--font-color1);
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .reservation_check > a {
+    text-align: center;
+    font-size: var(--font-size2);
+    font-weight: 500;
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+  .reservation_check > a:nth-of-type(2) {
+    border-left: 1px solid var(--font-color1);
+  }
+
+  .reservation_check > a:hover {
+    color: var(--font-color2);
+  }
 }
 
-.reservation_check > a:hover {
-  color: var(--font-color2);
+@media (max-width: 800px) {
+  .location {
+    background-image: url(../imges/reservation_main_banner.jpg);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+  }
+  .location h2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 150px;
+    font-size: 36px;
+  }
+  .title_list {
+    display: flex;
+    padding-top: 2rem;
+    max-width: 90%;
+  }
+  .title_list > li {
+    border: 2px solid var(--font-color2);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    text-align: center;
+  }
+  .title_list > li > a {
+    color: white;
+    font-family: "Noto Sans KR";
+    font-size: var(--font-size3);
+    font-weight: 300;
+    line-height: 40px;
+    padding: 0 0.5rem;
+  }
+  .title_list > li:hover {
+    background-color: var(--font-color2);
+  }
+  .title_list > li.on {
+    background-color: var(--font-color1);
+  }
+  .title_list > li.on > a {
+    color: var(--font-color2);
+  }
+  .reservation_check_con {
+    min-height: 700px;
+    max-height: 800px;
+    background-color: #28437280;
+    margin-top: 2rem;
+    padding-top: 3rem;
+    border-radius: 10px;
+  }
+  .reservation_check {
+    border-radius: 10px;
+    border: 1px solid var(--font-color1);
+    box-shadow: 0px 0px 5px black;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .reservation_check > strong {
+    font-size: var(--font-size3);
+    font-weight: 500;
+    width: 100%;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    background-color: var(--font-color2);
+    color: var(--font-color1);
+    border-radius: 10px 10px 0 0;
+  }
+  .reservation_check > * {
+    color: black;
+  }
+  .reservation_check > p {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--font-color1);
+    border-top: 1px solid var(--font-color1);
+    width: 100%;
+  }
+
+  .reservation_check > a {
+    text-align: center;
+    font-size: var(--font-size2);
+    font-weight: 500;
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+  .reservation_check > a:nth-of-type(2) {
+    border-left: 1px solid var(--font-color1);
+  }
+
+  .reservation_check > a:hover {
+    color: var(--font-color2);
+  }
 }
