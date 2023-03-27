@@ -58,5 +58,18 @@ const ham = document.querySelector(".fa-bars");
 const moNav = document.querySelector(".mo_nav");
 ham.addEventListener("click", () => {
   moNav.classList.toggle("on");
-  console.log("A");
+});
+
+const $moGnbList = document.querySelectorAll(".mo_gnb_list > li");
+const $moSubList = document.querySelectorAll(".mo_gnb_list > li > .sub_list");
+function show(num) {
+  $moSubList.forEach((a) => {
+    a.classList.remove("on");
+  });
+  $moSubList[num].classList.add("on");
+}
+$moGnbList.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    show(i);
+  });
 });

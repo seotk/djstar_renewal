@@ -17,15 +17,15 @@
 img {
   width: 100%;
 }
-.wrap {
-  overflow: hidden;
-  height: 100vh;
-  position: relative;
-}
 @media (min-width: 800px) {
-  .sec {
-    display: flex;
+  .wrap {
+    overflow: hidden;
+    height: 100vh;
     position: relative;
+  }
+  .sec {
+    position: relative;
+    flex-wrap: wrap;
   }
   /* .sec::before {
     content: "";
@@ -73,8 +73,6 @@ img {
     margin-top: 1rem;
   }
   .main {
-    position: absolute;
-    top: 250px;
   }
   .reservation_con {
     margin-top: 55px;
@@ -84,7 +82,7 @@ img {
     width: 200px;
     height: 50px;
     background-color: black;
-    border: 3px solid white;
+    border: 1px solid white;
     margin: 12px 8px;
     cursor: pointer;
     position: relative;
@@ -130,9 +128,9 @@ img {
     overflow: hidden;
     width: 305px;
     height: 140px;
-    top: -1.4rem;
+    top: 36%;
     right: 0rem;
-    border: 3px solid white;
+    border: 1px solid white;
   }
   .popup_swiper {
     position: relative;
@@ -191,7 +189,6 @@ img {
   .room_info {
     width: 260px;
     height: 180px;
-    /* border: 3px solid white; */
     overflow: hidden;
   }
   .room_start.on,
@@ -306,7 +303,7 @@ img {
     height: 100%;
   }
   .sub_menu_contents {
-    border: 3px solid white;
+    border: 1px solid white;
     height: 140px;
     padding-top: 1rem;
     backdrop-filter: none;
@@ -336,6 +333,7 @@ img {
     position: relative;
     padding-top: 0;
     border: none;
+    border: 1px solid white;
   }
   .slide_wrap > a {
     position: absolute;
@@ -385,11 +383,16 @@ img {
     width: 672px;
     height: 614px;
     left: 10%;
-    top: 35%;
+    top: 40%;
     z-index: -2;
   }
   .mo_main {
     display: none;
+  }
+  .ft {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 
@@ -398,6 +401,7 @@ img {
     max-width: 90%;
     width: calc(100% - 2rem);
     margin: auto;
+    flex-wrap: wrap;
     /* min-height: 700px; */
   }
   h2 {
@@ -405,6 +409,8 @@ img {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+
   }
   h2 > span {
     font-size: var(--font-size6);
@@ -419,21 +425,18 @@ img {
     display: none;
   }
   .mo_main {
-    position: absolute;
-    top: 250px;
-    width: 90%;
 
   }
   .reservation_con {
-    margin-top: 105px;
+    margin-top: 16px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .reservation_con > button {
     width: 200px;
     height: 50px;
     background-color: black;
-    border: 3px solid white;
+    border: 1px solid white;
     margin: 12px 8px;
     cursor: pointer;
     position: relative;
@@ -489,7 +492,7 @@ img {
   }
 
   .mo_sub_menu > button {
-    border: 3px solid white;
+    border: 1px solid white;
     width: 100%;
     height: 45px;
     outline: none;
@@ -529,9 +532,9 @@ img {
   }
   .popup_con {
     overflow: hidden;
-    width: 305px;
-    height: 140px;
-    border: 3px solid white;
+    width: 100%;
+    height: 150px;
+    border: 1px solid white;
     margin: auto;
     margin-top: 50px;
   }

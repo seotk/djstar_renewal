@@ -34,7 +34,6 @@ $title.forEach((item) => {
   item.addEventListener("click", toggleAccordion);
 });
 
-
 const list2 = document.querySelector(".mo_gnb_list");
 const $li2 = list2.querySelectorAll(".mo_gnb_list > li");
 const $title2 = list2.querySelectorAll(".mo_gnb_list > li > a");
@@ -54,3 +53,29 @@ function toggleAccordion() {
 $title.forEach((item) => {
   item.addEventListener("click", toggleAccordion);
 });
+
+// body 부분을 클릭시 클래스 제거
+const body = document.querySelector("body");
+
+body.addEventListener("click", function (event) {
+  const target = event.target;
+  if (!target.closest(".shortcut_btn") && !target.closest(".mo_gnb_list")) {
+    $li.forEach((item) => {
+      item.classList.remove("on");
+    });
+  }
+});
+
+
+
+// 틀린 부분
+
+//const body = document.querySelector("body");
+
+// function removeAccordion() {
+//   $li.forEach((item) => {
+//     item.classList.remove("on");
+//   });
+// }
+
+// body.addEventListener("click", removeAccordion);
