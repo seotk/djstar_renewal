@@ -536,6 +536,10 @@
     overflow: visible;
     height: 100%;
   }
+  .mo_nav.on .wrap {
+    overflow-y: hidden;
+  }
+
 }
 @media (max-width: 460px) {
   .wrap {

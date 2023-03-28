@@ -62,7 +62,7 @@ ham.addEventListener("click", () => {
 
 const $moGnbList = document.querySelectorAll(".mo_gnb_list > li");
 const $moSubList = document.querySelectorAll(".mo_gnb_list > li > .sub_list");
-function show(num) {
+function showMo(num) {
   $moSubList.forEach((a) => {
     a.classList.remove("on");
   });
@@ -70,6 +70,6 @@ function show(num) {
 }
 $moGnbList.forEach((btn, i) => {
   btn.addEventListener("click", () => {
-    show(i);
+    showMo(i);
   });
 });

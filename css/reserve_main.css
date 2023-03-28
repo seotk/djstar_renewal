@@ -114,12 +114,10 @@ img {
   }
   form {
     margin: 2rem 0;
-    position: absolute;
   }
   .item_con {
     margin: auto;
     position: relative;
-    min-height: 1500px;
     max-height: 3000px;
   }
   .item > li.on h3 {
@@ -350,9 +348,9 @@ img {
     display: block;
     max-height: 1500px;
   }
-  .ft {
+  /* .ft {
     margin-top: 300px;
-  }
+  } */
 }
 
 @media (max-width: 800px) {
@@ -435,12 +433,10 @@ img {
   .item_con {
     position: relative;
     margin: auto;
-    min-height: 1800px;
     width: 90%;
     max-width: calc(100% - 2rem);
   }
   .form {
-    position: absolute;
     top: 2rem;
     left: 0;
   }
